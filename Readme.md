@@ -1,7 +1,7 @@
 # Личный проект «Кэт энерджи»
 
 * Студент: [Ярослав Емельяненко](https://up.htmlacademy.ru/adaptive/27/user/2216859).
-* Наставник: [Анна Лисененкова] (https://htmlacademy.ru/profile/ankhena).
+* Наставник: [Анна Лисененкова](https://htmlacademy.ru/profile/ankhena).
 
 ---
 
