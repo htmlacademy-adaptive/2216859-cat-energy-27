@@ -5,7 +5,7 @@
     <title>HTML Academy: Кэт энерджи</title>
   </head>
   <body class="page__body">
-    <head class="main-header">
+    <header class="main-header">
       <a class="main-header__logo mobile-logo" href="#">
         <img src="/images/header/logo-mobile.svg" width="33" height="37" alt="happy cat">
       </a>
@@ -29,33 +29,35 @@
           </ul>
         </div>
     </nav>
-    </head>
+    </header>
     <main class="main-container">
-      <section class="nutrition-selection">
-      <h1 class="nutrition-selection__heading">Функциональное питание для котов</h1>
-      <p class="nutrition-selection__text">Занялся собой? Займись котом</p>
-      <a class="nutrition-selection__link">Подобрать программу</a>
-      <img class="nutrition-selection__image" src="#" width="" height="" alt="">
-    </section>
-    <section class="programs">
-      <div class="programs__wrapper">
-        <div class="programs__card card">
-          <img class="card__image" src="#" width="" height="" alt="">
-          <h2 class="card__title">Похудение</h2>
-          <p class="card__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
-          <a class="card__link" href="#">Катало Slim <svg class="card__link-icon"></svg></a>
+      <section class="hero">
+        <div class="hero__wrapper">
+      <h1 class="hero__heading">Функциональное питание для котов</h1>
+      <p class="hero__text">Занялся собой? Займись котом</p>
+      <a class="hero__link">Подобрать программу</a>
+      <img class="hero__image" src="#" width="" height="" alt="product cat energy pro with chicken">
         </div>
-        <div class="programs__card card">
-          <img class="card__image" src="#" width="" height="" alt="">
-          <h2 class="card__title">Набор массы</h2>
-          <p class="card__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
-          <a class="card__link" href="#">Каталог Pro <svg class="card__link-icon"></svg></a>
+    </section>
+    <section class="nutrition-selection">
+      <div class="nutrition-selection__wrapper">
+        <div class="nutrition-selection__option option">
+          <img class="option__image" src="#" width="" height="" alt="">
+          <h2 class="option__title">Похудение</h2>
+          <p class="option__text">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+          <a class="option__link" href="#">Катало Slim <svg class="option__link-icon"></svg></a>
+        </div>
+        <div class="nutrition-selection__option option">
+          <img class="option__image" src="#" width="" height="" alt="">
+          <h2 class="option__title">Набор массы</h2>
+          <p class="option__text">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+          <a class="option__link" href="#">Каталог Pro <svg class="option__link-icon"></svg></a>
         </div>
       </div>
     </section>
   <section class="advantages">
     <div class="advantages__wrapper">
-      <h2 class="advantages__title">Как это работает</h2>
+      <h3 class="advantages__title">Как это работает</h3>
       <ul class="advantages__list">
       <li class="advantages__item advantages__item--leaf">
         <p class="advantages__description"> Функциональное питание содержит только полезные питательные вещества.</p>
@@ -74,7 +76,7 @@
   </section>
   <section class="example">
     <div class="example__wrapper">
-      <h2 class="example__title">Живой пример</h2>
+      <h3 class="example__title">Живой пример</h3>
       <p class="example__description">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
       <dl class="example__list">
         <div class="example__item">
@@ -104,10 +106,11 @@
     <footer class="main-footer">
       <div class="main-footer__wrapper">
         <div class="main-footer__contacts contacts">
-        <b class="contacts__heading">Приглашаем к сотрудничеству дилеров!</h3>
+        <b class="contacts__heading">Приглашаем к сотрудничеству дилеров!</b>
         <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
         </div>
         <div class="main-footer__map">
+
         </div>
         <div class="main-footer__logo logo">
             <img class="logo__image" src="/images/footer/logo.svg" width="101" height="18" alt="cat energy">
