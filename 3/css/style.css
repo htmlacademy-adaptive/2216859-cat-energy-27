@@ -1,0 +1,335 @@
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/oswald/oswaldregular.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Oswald";
+  font-style: normal;
+  font-weight: 500;
+  src: url("../fonts/oswald/oswaldmeduim.woff2") format("woff2");
+  font-display: swap;
+}
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/lato/latoregular.woff2") format("woff2");
+  font-display: swap;
+}
+.page__body {
+  font-family: "lato", sans-serif;
+}
+.page__form {
+  font-family: "Oswald", sans-serif;
+}
+.visually-hidden {
+  display: none;
+}
+.nav__list {
+  list-style-type: none;
+}
+.nav__link {
+  font-family: "Oswald", sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 20px;
+  color: #111111;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.hero__wrapper {
+  background-color: rgba(104, 183, 56, 0.85);
+}
+.hero__heading {
+  padding: 27px 35px 25px 36px;
+  margin: 0;
+  font-family: "Oswald", sans-serif;
+  color: #ffffff;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+}
+.hero__text {
+  padding: 0 62px 29px 60px;
+  font-family: "Oswald", sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  text-transform: uppercase;
+}
+.hero__image {
+  margin: 29px 20px 0 20px;
+}
+.hero__link {
+  padding: 7px 44px;
+  font-family: "Oswald", sans-serif;
+  background-color: #68b738;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-decoration: none;
+}
+.nutrition-selection__title {
+  display: none;
+}
+.nutrition-selection__list {
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+}
+.nutrition-selection__option {
+  margin: 20px;
+  background-color: #f2f2f2;
+}
+.option__title {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 37px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.option__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+}
+.option__link {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 16px;
+  color: #000000;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+.advantages__list {
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+}
+.advantages__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+}
+.advantages__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+}
+.example__wrapper {
+  background-color: #eaeaea;
+}
+.example__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 40px;
+}
+.example__description {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
+}
+.example__text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: #444444;
+}
+.example__number {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 24px;
+}
+.slider__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.footer__wrapper {
+  background-color: #f2f2f2;
+}
+.footer__contacts {
+  background-color: #ffffff;
+}
+.contacts__heading {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #111111;
+  text-transform: uppercase;
+}
+.contacts__address {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: #444444;
+}
+.social {
+  list-style-type: none;
+}
+.social__link {
+  text-decoration: none;
+}
+.copyright__link {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: #444444;
+  text-decoration: none;
+}
+.catalog__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+}
+.catalog__list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.card__title a {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #222222;
+}
+.card__order {
+  padding: 10px 109px;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #68b738;
+}
+.card__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+  color: #444444;
+}
+.card__price {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 16px;
+  color: #444444;
+}
+.features {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+}
+.extras__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.extention__title {
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+.extention__text {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
+}
+.extention__to-all {
+  padding: 10px 94px;
+  font-family: "Oswald", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #444444;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: #f2f2f2;
+}
+.bonus {
+  background-color: rgba(104, 183, 56, 0.85);
+}
+.bonus__title {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+.form__title {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+}
+.form__subtitle {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 26px;
+}
+.form__text {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.form__program {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.form__item {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #444444;
+}
+.form__order-button {
+  padding: 7px 44px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: #68b738;
+}
+.form__extra {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+.form__reference {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.form-fields__group {
+  border-style: none;
+}
+/*# sourceMappingURL=style.css.map */
