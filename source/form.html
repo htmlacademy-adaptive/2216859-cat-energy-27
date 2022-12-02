@@ -33,8 +33,8 @@
     <div class="form__wrapper">
       <h1 class="form__title">Подбор программы</h1>
       <p class="form__text">Заполние анкету, и мы подберем программу питания для вашего кота</p>
-      <form class="form-fields" action="https://echo.htmlacademy.ru/courses" method="post">
-        <fieldset class="form-fields__group form">
+      <form class="form_fields" action="https://echo.htmlacademy.ru/courses" method="post">
+        <fieldset class="form__fields">
           <legend class="form___title visually-hidden">Данные о котике</legend>
             <label class="form__item" for="pet-name">имя:<sup>*</sup></label>
             <input class="form__item" id="pet-name" type="text" placeholder="барсик" name="pet-name" required>
@@ -43,7 +43,7 @@
             <label class="form__item" for="pet-age">возраст (лет):</label>
             <input class="form__item" id="pet-age" type="number" placeholder="7" name="pet-age">
         </fieldset>
-        <fieldset class="form-fields__group form">
+        <fieldset class="form__fields">
           <legend class="form__title visually-hidden">Выбор программы</legend>
             <input type="radio" id="slim" name="program" value="Похудение">
             <label class="form__program" for="slim">Похудение</label><br>
@@ -52,19 +52,19 @@
             <input type="radio" id="advice" name="program" value="Не знаю">
             <label class="form__program" for="advice">Не знаю (Нужен ваш совет)</label>
         </fieldset>
-        <fieldset class="form-fields__group form">
+        <fieldset class="form__fields">
           <legend class="form__subtitle">Контактные данные (владельца кота)</legend>
             <label class="form__item" for="email-field">e-mail:<sup>*</sup></label>
             <input class="form__item" id="email-field" type="email" placeholder="kuklachev@gmail.com" name="e-mail" required>
             <label class="form__item" for="phone-field">телефон:<sup>*</sup></label>
             <input class="form__item" id="phone-field" type="tel" placeholder="8(960)900-60-90" name="tel" required>
         </fieldset>
-        <fieldset class="form-fields__group form">
+        <fieldset class="form__fields">
           <legend class="form__title visually-hidden">Комментарий</legend>
             <label class="form__title" for="comment-field">Комментарии</label>
             <textarea class="form__comment" id="comment-field" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
-        <fieldset class="form-fields__group form">
+        <fieldset class="form__fields">
           <legend class="form__subtitle">Дополнительно</legend>
             <input class="form__extra" type="checkbox" id="sweetener" name="sweetener" checked>
             <label class="form__extra" for="sweetener">Сахарозаменитель</label>
