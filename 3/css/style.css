@@ -20,13 +20,20 @@
   font-display: swap;
 }
 .page__body {
-  font-family: "lato", sans-serif;
+  font-family: "lato", "Arial", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #444444;
 }
 .page__form {
   font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  line-height: 18px;
 }
 .visually-hidden {
-  display: none;
+  position: fixed;
+  transform: scale(0);
 }
 .nav__list {
   list-style-type: none;
@@ -94,12 +101,6 @@
   text-transform: uppercase;
   text-align: center;
 }
-.option__text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
-  color: #444444;
-}
 .option__link {
   font-family: "Oswald", sans-serif;
   font-weight: 400;
@@ -121,9 +122,6 @@
   line-height: 40px;
 }
 .advantages__description {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 18px;
   color: #444444;
 }
 .example__wrapper {
@@ -235,10 +233,17 @@
   line-height: 16px;
   color: #444444;
 }
-.features {
+.features__term {
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
+  color: #444444;
+}
+.features__value {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  color: #444444;
 }
 .extras__title {
   font-family: "Oswald", sans-serif;
@@ -246,20 +251,18 @@
   font-weight: 400;
   line-height: 24px;
 }
-.extention__title {
+.extension__title {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
 }
-.extention__text {
-  font-weight: 400;
+.extension__text {
   font-size: 12px;
   line-height: 16px;
-  color: #444444;
 }
-.extention__to-all {
+.extension__to-all {
   padding: 10px 94px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -279,29 +282,34 @@
   line-height: 20px;
   color: #ffffff;
 }
+.form__fields {
+  border-style: none;
+}
 .form__title {
   font-size: 36px;
-  font-weight: 400;
   line-height: 36px;
 }
 .form__subtitle {
   font-size: 24px;
-  font-weight: 400;
   line-height: 26px;
 }
 .form__text {
   font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
   text-transform: uppercase;
 }
 .form__program {
   font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
   text-transform: uppercase;
 }
 .form__item {
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: #444444;
+}
+.form__comment {
+  font-family: "Oswald", "Arial", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 18px;
@@ -309,6 +317,7 @@
   color: #444444;
 }
 .form__order-button {
+  font-family: "Oswald", "Arial", sans-serif;
   padding: 7px 44px;
   font-size: 16px;
   font-weight: 400;
@@ -319,8 +328,6 @@
 }
 .form__extra {
   font-size: 16px;
-  font-weight: 400;
-  line-height: 18px;
   text-transform: uppercase;
 }
 .form__reference {
@@ -328,8 +335,5 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
-}
-.form-fields__group {
-  border-style: none;
 }
 /*# sourceMappingURL=style.css.map */
