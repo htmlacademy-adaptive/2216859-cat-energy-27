@@ -1,19 +1,80 @@
 .example__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 25px 0 40px 0;
   background-color: rgba(234, 234, 234, 1);
 }
 
+@media (min-width: @tablet-width) {
+  .example__wrapper {
+    padding: 43px 0 100px 0;
+    background-color: rgb(255, 255, 255);
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__wrapper {
+    padding: 0 0 75px 0;
+  }
+}
+
 .example__title {
+  margin: 0;
+  padding-bottom: 40px;
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   font-weight: 400;
   line-height: 40px;
+  color: rgb(0 0 0);
 }
+
+@media (min-width: @tablet-width) {
+  .example__title {
+    padding-bottom: 63px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
+
+.example__list {
+  margin: 0;
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .example__list {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
 
 .example__description {
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   color: rgba(68, 68, 68, 1);
+}
+
+@media (min-width: @tablet-width) {
+  .example__description {
+    margin: 0;
+    padding-bottom: 54px;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.example__data {
+  display: flex;
 }
 
 .example__text {
@@ -24,8 +85,53 @@
 }
 
 .example__number {
+  margin: 0;
+  padding: 0;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+}
+
+@media (min-width: @tablet-width) {
+  .example__number {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__number {
+    font-size: 30px;
+    line-height: 37px;
+  }
+}
+
+.example__summ {
+  margin: 0;
+  padding: 0;
+}
+
+.example__summary {
+  display: flex;
+  justify-content: center;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  font-size: 14px;
+  line-height: 20px;
+  text-transform: uppercase;
+}
+
+@media (min-width: @tablet-width) {
+  .example__summary {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__summary {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
