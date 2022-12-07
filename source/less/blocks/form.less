@@ -149,6 +149,17 @@
   }
 }
 
+.form__extras-list {
+  padding: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .form__extras-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
 @media (min-width: @desktop-width) {
   .form__extras-list {
     display: flex;
