@@ -1,4 +1,31 @@
+.card {
+  margin-bottom: 19px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: end;
+}
+
+@media (min-width: @tablet-width) {
+  .card {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.card__link {
+  margin: 0 auto;
+  grid-column: 1/2;
+  grid-row: 1/3;
+}
+
 .card__title a {
+  margin: 0;
+  padding: 0;
+  grid-column: 2/3;
+  grid-row: 1/2;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -8,7 +35,13 @@
   color: rgba(34, 34, 34, 1);
 }
 
+.card__features {
+  grid-column: 2/3;
+  grid-row: 2/3;
+}
+
 .card__order {
+  grid-column: 1/3;
   padding: 10px 109px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -16,6 +49,8 @@
   line-height: 20px;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
+  align-self: center;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(104, 183, 56, 1);
 }
