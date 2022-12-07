@@ -35,6 +35,7 @@
       <h1 class="form__title">Подбор программы</h1>
       <p class="form__text">Заполние анкету, и мы подберем программу питания для вашего кота</p>
       <form class="form_fields" action="https://echo.htmlacademy.ru/courses" method="post">
+      <div class="form__group">
         <fieldset class="form__fields">
           <legend class="form___title visually-hidden">Данные о котике</legend>
           <ul class="form__list">
@@ -61,9 +62,10 @@
             <input type="radio" id="advice" name="program" value="Не знаю">
             <label class="form__program" for="advice">Не знаю (Нужен ваш совет)</label>
         </fieldset>
+      </div>
         <fieldset class="form__fields">
           <legend class="form__subtitle">Контактные данные (владельца кота)</legend>
-          <ul class="form__list">
+          <ul class="form__contacts-list">
             <li class="form__item">
               <label class="form__owner-data" for="email-field">e-mail:<sup>*</sup></label>
               <input class="form__owner-data" id="email-field" type="email" placeholder="kuklachev@gmail.com" name="e-mail" required>
@@ -81,22 +83,22 @@
         </fieldset>
         <fieldset class="form__fields">
           <legend class="form__subtitle">Дополнительно</legend>
-            <ul class="form__list"></ul>
+            <ul class="form__extras-list">
               <li class="form__extra-item">
-                <input class="form__extra" type="checkbox" id="sweetener" name="sweetener" checked>
-                <label class="form__extra" for="sweetener">Сахарозаменитель</label>
+                <input class="form__extras" type="checkbox" id="sweetener" name="sweetener" checked>
+                <label class="form__extras" for="sweetener">Сахарозаменитель</label>
               </li>
               <li class="form__extra-item">
-                <input type="checkbox" id="water" name="water">
-                <label class="form__extra" for="water">Питьевая вода</label>
+                <input class="form__extras" type="checkbox" id="water" name="water">
+                <label class="form__extras" for="water">Питьевая вода</label>
               </li>
               <li class="form__extra-item">
-                <input type="checkbox" id="milk" name="milk">
-                <label class="form__extra" for="milk">Молоко</label>
+                <input class="form__extras" type="checkbox" id="milk" name="milk">
+                <label class="form__extras" for="milk">Молоко</label>
               </li>
               <li class="form__extra-item">
-                <input type="checkbox" id="vitamins" name="vitamins">
-                <label class="form__extra" for="vitamins">Витамины</label>
+                <input class="form__extras" type="checkbox" id="vitamins" name="vitamins">
+                <label class="form__extras" for="vitamins">Витамины</label>
               </li>
             </ul>
         </fieldset>
