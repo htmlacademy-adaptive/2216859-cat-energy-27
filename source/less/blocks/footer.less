@@ -1,14 +1,22 @@
-.footer__wrapper {
-  background-color: rgba(242, 242, 242, 1);
+.footer {
+  margin: 0 auto;
 }
 
 .footer__contacts {
-  background-color: rgba(255, 255, 255, 1);
+  width: 280px;
+  margin: 0 auto;
 }
 
-.footer__logo {
-  padding-top: 39px;
-  padding-bottom: 32px;
+@media (min-width: @tablet-width) {
+  .footer__contacts {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .footer__contacts {
+    width: 565px;
+  }
 }
 
 .footer__copyright {

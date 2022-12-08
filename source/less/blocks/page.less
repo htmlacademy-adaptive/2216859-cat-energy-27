@@ -1,7 +1,8 @@
 .page__body {
   margin: 0;
-  padding: 0 20px;
-  min-width: 280px;
+  min-width: 320px;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
   font-family: "Lato", "Arial", sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -9,34 +10,19 @@
   color: rgba(68, 68, 68, 1);
 }
 
+.main-container {
+  margin: 0 auto;
+  width: 280px;
+}
+
 @media (min-width: @tablet-width) {
-  .page__body {
-    padding: 0 30px;
+  .main-container {
+    width: 708px;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .page__body {
-    padding: 0 110px;
-  }
-}
-
-.page__form {
-  margin: 0;
-  padding: 0 20px;
-  font-family: "Oswald", sans-serif;
-  font-weight: 400;
-  line-height: 18px;
-}
-
-@media (min-width: @tablet-width) {
-  .page__form {
-    padding: 0 30px;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .page__form {
-    padding: 0 110px;
+  .main-container {
+    width: 1220px;
   }
 }
