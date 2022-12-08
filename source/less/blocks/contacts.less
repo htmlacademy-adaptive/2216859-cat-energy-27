@@ -1,4 +1,13 @@
+.contacts {
+  display: flex;
+  justify-content: space-between;
+}
 
+@media (min-width: @desktop-width) {
+  .contacts {
+    width: 405px;
+  }
+}
 
 .contacts__heading {
   font-family: "Oswald", sans-serif;
@@ -9,9 +18,39 @@
   text-transform: uppercase;
 }
 
+@media (min-width: @tablet-width) {
+  .contacts__heading {
+    margin: 0;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__heading {
+    margin: 0;
+    font-size: 20px;
+  }
+}
+
 .contacts__address {
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   color: rgba(68, 68, 68, 1);
+}
+
+@media (min-width: @tablet-width) {
+  .contacts__address {
+    margin: 0;
+    font-size: 16px;
+    text-align: right;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts__address {
+    margin: 0;
+    font-size: 16px;
+    text-align: left;
+  }
 }

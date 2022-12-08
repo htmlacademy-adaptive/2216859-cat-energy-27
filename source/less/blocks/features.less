@@ -1,14 +1,32 @@
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+@media (min-width: @tablet-width) {
+  .features {
+    width: 250px;
+  }
+}
+
 .features__term {
+  padding: 0;
+  margin: 0;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: rgba(68, 68, 68, 1);
+  text-align: left;
 }
 
 
 .features__value {
+  padding: 0;
+  margin: 0;
   font-weight: 400;
   font-size: 12px;
   line-height: 16px;
   color: rgba(68, 68, 68, 1);
+  text-align: right;
 }

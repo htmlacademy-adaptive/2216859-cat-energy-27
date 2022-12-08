@@ -1,4 +1,40 @@
+.card {
+  margin-bottom: 19px;
+  display: grid;
+  grid-template-areas:
+    "img title"
+    "img features"
+    "order order";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: end;
+}
+
+@media (min-width: @tablet-width) {
+  .card {
+    margin: 0;
+    grid-template-areas:
+      "img"
+      "title"
+      "features"
+      "order";
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.card__link {
+  margin: 0 auto;
+  grid-area: img;
+}
+
+
 .card__title a {
+  grid-area: title;
+  margin: 0;
+  padding: 0;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -8,14 +44,21 @@
   color: rgba(34, 34, 34, 1);
 }
 
+.card__features {
+  grid-area: features;
+}
+
 .card__order {
-  padding: 10px 109px;
+  grid-area: order;
+  padding: 10px 20px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-decoration: none;
   text-transform: uppercase;
+  text-align: center;
+  align-self: center;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(104, 183, 56, 1);
 }
