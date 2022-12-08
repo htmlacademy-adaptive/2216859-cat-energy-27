@@ -1,7 +1,12 @@
 .card {
   margin-bottom: 19px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "img title"
+    "img features"
+    "order order";
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: end;
 }
@@ -9,23 +14,27 @@
 @media (min-width: @tablet-width) {
   .card {
     margin: 0;
-    display: flex;
-    flex-direction: column;
+    grid-template-areas:
+      "img"
+      "title"
+      "features"
+      "order";
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr 1fr 1fr 1fr;
     align-items: center;
   }
 }
 
 .card__link {
   margin: 0 auto;
-  grid-column: 1/2;
-  grid-row: 1/3;
+  grid-area: img;
 }
 
+
 .card__title a {
+  grid-area: title;
   margin: 0;
   padding: 0;
-  grid-column: 2/3;
-  grid-row: 1/2;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -36,13 +45,12 @@
 }
 
 .card__features {
-  grid-column: 2/3;
-  grid-row: 2/3;
+  grid-area: features;
 }
 
 .card__order {
-  grid-column: 1/3;
-  padding: 10px 109px;
+  grid-area: order;
+  padding: 10px 20px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
