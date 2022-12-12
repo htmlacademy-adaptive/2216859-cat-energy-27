@@ -1,8 +1,26 @@
+.example {
+  width: 100%;
+  background-color: rgba(234, 234, 234, 1);
+}
+
 .example__wrapper {
+  width: 280px;
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
   padding: 25px 0 40px 0;
-  background-color: rgba(234, 234, 234, 1);
+}
+
+@media (min-width: @tablet-width) {
+  .example__wrapper {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .example__wrapper {
+    width: 1220px;
+  }
 }
 
 @media (min-width: @tablet-width) {

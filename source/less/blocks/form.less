@@ -1,3 +1,20 @@
+.form__wrapper {
+  width: 280px;
+  margin: 0 auto;
+}
+
+@media (min-width: @tablet-width) {
+  .form__wrapper {
+    width: 708px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .form__wrapper {
+    width: 1220px;
+  }
+}
+
 .form__fields {
   border: none;
   padding: 0;
@@ -90,9 +107,11 @@
 }
 
 .form__title {
+  font-family: "Oswald", "Arial", sans-serif;
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
+  color: rgba(34, 34, 34, 1);
 }
 
 .form__subtitle {
