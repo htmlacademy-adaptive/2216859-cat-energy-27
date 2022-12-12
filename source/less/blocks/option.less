@@ -1,4 +1,20 @@
+.option {
+  display: grid;
+  grid-template-areas:
+    "image title"
+    "text text"
+    "link link";
+  grid-template-columns: min-content auto;
+  justify-items: start;
+  align-items: center;
+}
+
+.option__image {
+  grid-area: image;
+}
+
 .option__title {
+  grid-area: title;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 24px;
@@ -7,7 +23,12 @@
   text-align: center;
 }
 
+.option__text {
+  grid-area: text;
+}
+
 .option__link {
+  grid-area: link;
   position: relative;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
