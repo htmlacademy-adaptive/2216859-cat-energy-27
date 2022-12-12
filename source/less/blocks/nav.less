@@ -10,6 +10,8 @@
 
 @media (min-width: @tablet-width) {
   .nav {
+    display: flex;
+    flex-wrap: wrap;
     width: 708px;
     justify-content: space-between;
   }
@@ -20,7 +22,6 @@
     width: 1220px;
   }
 }
-
 
 .nav__toggle {
   position: absolute;
@@ -82,8 +83,10 @@
   }
 }
 
-.nav--closed .nav__list {
-  display: none;
+@media (max-width: @mobile-width-only) {
+  .nav--closed .nav__list {
+    display: none;
+  }
 }
 
 .nav__list {
