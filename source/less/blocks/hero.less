@@ -7,23 +7,24 @@
   z-index: 2;
   background-repeat: no-repeat;
   background-position: 50% 0;
-  background-size: contain;
+  background-size: auto;
+
+  @media (min-width: @tablet-width) {
+    background-image: none;
+    background-color: transparent;
+  }
 }
 
 .hero__wrapper {
   width: 280px;
   margin: 0 auto;
   margin-bottom: 20px;
-}
 
-@media (min-width: @tablet-width) {
-  .hero__wrapper {
+  @media (min-width: @tablet-width) {
     width: 708px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .hero__wrapper {
+  @media (min-width: @desktop-width) {
     width: 1220px;
   }
 }
