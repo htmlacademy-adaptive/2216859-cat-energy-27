@@ -1,16 +1,12 @@
 .nutrition {
   width: 280px;
   margin: 0 auto;
-}
 
-@media (min-width: @tablet-width) {
-  .nutrition {
+  @media (min-width: @tablet-width) {
     width: 708px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .nutrition {
+  @media (min-width: @desktop-width) {
     width: 1220px;
   }
 }
@@ -25,18 +21,14 @@
   margin-bottom: 20px;
   padding: 20px;
   display: grid;
-  grid-template-areas:
-    "image title"
-    "text text"
-    "link link";
-  grid-template-columns: min-content auto;
+  grid-template-columns: 1fr 2fr;
   justify-items: start;
   align-items: center;
   background-color: rgba(242, 242, 242, 1);
 }
 
 .nutrition__title {
-  grid-area: title;
+  grid-column: 2/4;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 24px;
@@ -45,17 +37,12 @@
   text-align: center;
 }
 
-
-.nutrition__image {
-  grid-area: image;
-}
-
 .nutrition__text {
-  grid-area: text;
+  grid-column: 1/4;
 }
 
 .nutrition__link {
-  grid-area: link;
+  grid-column: 1/4;
   position: relative;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
