@@ -4,10 +4,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: rgba(242, 242, 242, 1);
 
   @media (min-width: @tablet-width) {
     width: 708px;
+    padding: 58px 0 55px 0;
     flex-direction: row;
     justify-content: space-between;
   }
@@ -17,21 +17,25 @@
   }
 }
 
-
 .social {
   margin: 0;
-  padding: 0;
+  padding: 20px 94px;
   display: flex;
   align-items: center;
   list-style-type: none;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
+    padding: 0;
   }
 }
 
 .social__logo {
   padding: 39px 96px 32px 96px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .social__link {
