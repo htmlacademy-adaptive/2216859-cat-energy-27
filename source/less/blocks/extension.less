@@ -1,9 +1,16 @@
 .extension__wrapper {
   display: flex;
   flex-direction: column;
+
+  @media (min-width: @tablet-width) {
+    box-sizing: border-box;
+    padding: 161px 38px 38px 37px;
+    border: solid 2px rgba(242, 242, 242, 1);
+  }
 }
 
 .extension__title {
+  margin: 0;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
@@ -11,12 +18,32 @@
   text-transform: uppercase;
   color: rgba(17, 17, 17, 1);
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 23px;
+    font-size: 20px;
+    line-height: 22px;
+
+    &::before {
+      content: "";
+      width: 60px;
+      height: 60px;
+      background-image: url("/img/plus.png");
+    }
+  }
 }
 
 .extension__text {
+  margin: 0;
   font-size: 12px;
   line-height: 16px;
   text-align: center;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px 87px 40px;
+    font-size: 16px;
+    line-height: 18px;
+  }
 }
 
 .extension__to-all {
