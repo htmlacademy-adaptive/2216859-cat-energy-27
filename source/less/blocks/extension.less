@@ -1,5 +1,5 @@
 .extension__wrapper {
-  position: relative;
+  // position: relative;
   display: flex;
   flex-direction: column;
   padding-top: 78px;
@@ -13,6 +13,7 @@
 }
 
 .extension__title {
+  position: relative;
   padding-bottom: 8px;
   margin: 0;
   font-family: "Oswald", sans-serif;
@@ -26,7 +27,7 @@
   &::before {
     position: absolute;
     content: "";
-    top: 20px;
+    bottom: 50px;
     left: 125px;
     width: 30px;
     height: 30px;
@@ -39,11 +40,20 @@
     line-height: 22px;
 
     &::before {
-      top: 60px;
-      left: 125px;
+      bottom: 110px;
+      left: 93px;
       content: "";
       width: 60px;
       height: 60px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      content: "";
+      left: 53px;
     }
   }
 }
@@ -59,6 +69,10 @@
     padding: 0 40px 87px 40px;
     font-size: 16px;
     line-height: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 0 87px 0;
   }
 }
 
