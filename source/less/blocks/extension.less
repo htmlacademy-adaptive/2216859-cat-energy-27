@@ -1,15 +1,19 @@
 .extension__wrapper {
+  position: relative;
   display: flex;
   flex-direction: column;
+  padding-top: 78px;
+  padding-bottom: 25px;
 
   @media (min-width: @tablet-width) {
-    box-sizing: border-box;
+    // box-sizing: border-box;
     padding: 161px 38px 38px 37px;
     border: solid 2px rgba(242, 242, 242, 1);
   }
 }
 
 .extension__title {
+  padding-bottom: 8px;
   margin: 0;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -19,16 +23,27 @@
   color: rgba(17, 17, 17, 1);
   text-align: center;
 
+  &::before {
+    position: absolute;
+    content: "";
+    top: 20px;
+    left: 125px;
+    width: 30px;
+    height: 30px;
+    background-image: url("/img/plus.svg");
+  }
+
   @media (min-width: @tablet-width) {
     padding-bottom: 23px;
     font-size: 20px;
     line-height: 22px;
 
     &::before {
+      top: 60px;
+      left: 125px;
       content: "";
       width: 60px;
       height: 60px;
-      background-image: url("/img/plus.png");
     }
   }
 }
@@ -38,6 +53,7 @@
   font-size: 12px;
   line-height: 16px;
   text-align: center;
+  padding: 0 30px 21px 30px;
 
   @media (min-width: @tablet-width) {
     padding: 0 40px 87px 40px;
