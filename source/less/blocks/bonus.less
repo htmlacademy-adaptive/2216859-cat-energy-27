@@ -6,6 +6,11 @@
   @media (min-width: @tablet-width) {
     padding: 71px 124px 69px 422px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    padding: 185px 43px 42px 41px;
+  }
 }
 
 .bonus__title {
@@ -35,6 +40,15 @@
       left: -345px;
       width: 80px;
       height: 82px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    text-align: center;
+
+    &--icon::before {
+      bottom: 90px;
+      left: 40px;
     }
   }
 }

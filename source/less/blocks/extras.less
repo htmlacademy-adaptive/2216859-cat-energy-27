@@ -49,7 +49,11 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding: 0;
+    padding: 15px 0;
+    border: none;
+    border-bottom: solid 1px rgba(205, 205, 205, 1);
+    align-items: center;
+    justify-items: start;
   }
 }
 
@@ -64,6 +68,7 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
+    line-height: 1;
   }
 }
 
@@ -73,6 +78,11 @@
   grid-column: 1/3;
 
   @media (min-width: @tablet-width) {
+    margin: 0;
+    grid-column: 1/2;
+  }
+
+  @media (min-width: @desktop-width) {
     grid-column: 1/2;
   }
 }
@@ -91,6 +101,11 @@
     font-size: 16px;
     text-align: end;
   }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    grid-column: 2/3;
+  }
 }
 
 .extras__price {
@@ -107,6 +122,11 @@
     grid-column: 4/5;
     font-size: 16px;
     line-height: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+    grid-column: 3/4;
   }
 }
 
@@ -128,10 +148,9 @@
   @media (min-width: @tablet-width) {
     grid-column: 1/-1;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .extras__order {
+  @media (min-width: @desktop-width) {
+    grid-column: 4/5;
     width: 244px;
     padding: 7px 26px;
   }
@@ -151,5 +170,12 @@
     background-repeat: no-repeat;
     background-size: cover;
     z-index: -1;
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      width: 245px;
+      height: 288px;
+    }
   }
 }
