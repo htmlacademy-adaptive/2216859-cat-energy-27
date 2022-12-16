@@ -2,7 +2,6 @@
   position: relative;
   margin: 0 auto;
   min-width: 320px;
-  order: 2;
 
   &::before {
     position: absolute;
@@ -16,8 +15,21 @@
   }
 
   @media (min-width: @tablet-width) {
-    background-image: none;
-    background-color: transparent;
+    &::before {
+      background-image: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/hero-mobile.jpg");
+      width: 50%;
+      height: 694px;
+      bottom: 0;
+      left: 50%;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
   }
 }
 
@@ -25,6 +37,8 @@
   width: 280px;
   margin: 0 auto;
   margin-bottom: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
 
   @media (min-width: @tablet-width) {
     width: 708px;
@@ -32,12 +46,14 @@
 
   @media (min-width: @desktop-width) {
     width: 1220px;
+    margin-bottom: 82px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 .hero__heading {
-  padding: 27px 0 25px 0;
-  margin: 0;
+  padding-top: 27px;
+  margin-bottom: 25px;
   text-align: center;
   font-family: "Oswald", sans-serif;
   color: rgba(255, 255, 255, 1);
@@ -46,7 +62,8 @@
   line-height: 36px;
 
   @media (min-width: @tablet-width) {
-    padding: 62px 0 41px 87px;
+    padding: 62px 0 0 87px;
+    margin-bottom: 41px;
     font-size: 60px;
     line-height: 60px;
     color: rgba(0, 0, 0, 1);
@@ -55,6 +72,7 @@
 }
 
 .hero__text {
+  margin: 0;
   padding-bottom: 60px;
   text-align: center;
   font-family: "Oswald", sans-serif;
@@ -66,10 +84,17 @@
 
   @media (min-width: @tablet-width) {
     padding-left: 87px;
+    margin-bottom: 49px;
     font-size: 20px;
     line-height: 20px;
     color: rgba(0, 0, 0, 1);
     text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/2;
+    padding-left: 80px;
+    padding-bottom: 52px;
   }
 }
 
@@ -77,6 +102,12 @@
   margin: -40px 20px 0 20px;
   margin-left: auto;
   margin-right: auto;
+
+  @media (min-width: @desktop-width) {
+    grid-column: 2/3;
+    grid-row: 1/3;
+    margin: 0;
+  }
 }
 
 .hero__link {
@@ -84,7 +115,7 @@
   margin: 0 auto;
   padding: 7px 44px;
   font-family: "Oswald", sans-serif;
-  background-color: rgba(104, 183, 56, 1);
+  background-color: rgb(104, 183, 56);
   color: rgba(255, 255, 255, 1);
   font-size: 14px;
   font-weight: 400;
@@ -95,9 +126,15 @@
 
   @media (min-width: @tablet-width) {
     margin-left: 92px;
-    margin-right: 374px;
+    margin-bottom: 185px;
     padding: 14px 26px;
     font-size: 20px;
     line-height: 20px;
+    grid-row: 3/4;
+  }
+
+  @media (min-width: @desktop-width) {
+    grid-column: 1/2;
+    margin-left: 80px;
   }
 }
