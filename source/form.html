@@ -33,7 +33,7 @@
   <section class="form">
     <div class="form__wrapper">
       <h1 class="form__title">Подбор программы</h1>
-      <p class="form__text">Заполние анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="form__text">Заполние анкету, и мы подберем программу<br> питания для вашего кота</p>
       <form class="form_fields" action="https://echo.htmlacademy.ru/courses" method="post">
       <div class="form__group">
         <fieldset class="form__fields">
@@ -82,8 +82,8 @@
             <textarea class="form__comment-area" id="comment-field" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
         <fieldset class="form__extra">
-          <ul class="form__extras-list">
-              <legend class="form__subtitle">Дополнительно</legend>
+          <ul class="form__extra-list">
+              <legend class="form__extra-subtitle">Дополнительно</legend>
               <li class="form__extra-item">
                 <input class="visually-hidden" type="checkbox" id="sweetener" name="sweetener" checked>
                 <label class="form__product" for="sweetener">Сахарозаменитель</label>
@@ -102,9 +102,11 @@
               </li>
             </ul>
         </fieldset>
+        <div class="form__order-wrapper">
           <input class="form__order-button" type="submit" value="Отправить заявку">
+          <small class="form__order-reference">* — Обязательные поля</small>
+        </div>
       </form>
-      <small class="form__reference">* — Обязательные поля</small>
     </div>
   </section>
 </main>
