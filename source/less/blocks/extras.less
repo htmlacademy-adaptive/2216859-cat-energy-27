@@ -37,8 +37,14 @@
 }
 
 .extras__item {
+  padding: 12px 0 19px 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  border-bottom: solid 1px rgba(205, 205, 205, 1);
+
+  &:first-child {
+    border-top: solid 1px rgba(205, 205, 205, 1);
+  }
 
   @media (min-width: @tablet-width) {
     padding: 26px 38px 28px;
@@ -87,7 +93,6 @@
 }
 
 .extras__order {
-  margin-bottom: 31px;
   grid-column: 1/3;
   width: 100%;
   padding: 10px 0 10px 0;
@@ -111,5 +116,18 @@
 }
 
 .extras__bonus {
-  margin-top: 35px;
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 280px;
+    height: 290px;
+    top: 15px;
+    left: 0;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("/img/bonus-image.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
 }
