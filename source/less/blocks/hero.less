@@ -1,13 +1,19 @@
 .hero {
+  position: relative;
   margin: 0 auto;
   min-width: 320px;
   order: 2;
-  background-color: rgba(104, 183, 56, 0.85);
-  background-image: url("../img/hero-mobile.jpg");
-  z-index: 2;
-  background-repeat: no-repeat;
-  background-position: 50% 0;
-  background-size: auto;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 302px;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/hero-mobile.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
 
   @media (min-width: @tablet-width) {
     background-image: none;
