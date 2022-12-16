@@ -2,9 +2,14 @@
   position: relative;
   padding: 187px 61px 43px 58px;
   margin-top: 35px;
+
+  @media (min-width: @tablet-width) {
+    padding: 71px 124px 69px 422px;
+  }
 }
 
 .bonus__title {
+  margin: 0;
   position: relative;
   font-weight: 400;
   font-size: 16px;
@@ -20,5 +25,16 @@
     width: 78px;
     height: 80px;
     background-image: url("/img/present-icon.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    text-align: left;
+
+    &--icon::before {
+      bottom: -10px;
+      left: -345px;
+      width: 80px;
+      height: 82px;
+    }
   }
 }
