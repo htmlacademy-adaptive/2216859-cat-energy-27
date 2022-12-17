@@ -1,4 +1,8 @@
 .contacts {
+  position: relative;
+}
+
+.contacts__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -6,7 +10,7 @@
   margin: 0 auto;
   padding-top: 26px;
   padding-bottom: 26px;
-  background-color: transparent;
+  background-color: rgb(255, 255, 255);
 
   @media (min-width: @tablet-width) {
     width: 708px;
@@ -14,7 +18,10 @@
   }
 
   @media (min-width: @desktop-width) {
+    position: absolute;
     width: 405px;
+    top: 95px;
+    left: 110px;
   }
 }
 
