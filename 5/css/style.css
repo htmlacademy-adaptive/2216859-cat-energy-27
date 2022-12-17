@@ -85,8 +85,8 @@
   right: 0;
   width: 24px;
   height: 2px;
-  background-color: #000001;
-  box-shadow: 0 8px 0 0 #000001, 0 16px 0 0 #000001;
+  background-color: #000000;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
 }
 .nav--opened .nav__toggle::before,
 .nav--opened .nav__toggle::after {
@@ -1029,7 +1029,7 @@
   line-height: 1;
   text-decoration: none;
   text-transform: uppercase;
-  color: #222222;
+  color: #000000;
 }
 @media (min-width: 708px) {
   .extras__title a {
@@ -1171,7 +1171,7 @@
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
-  color: #111111;
+  color: #000000;
   text-align: center;
 }
 .extension__title::before {
@@ -1308,7 +1308,7 @@
   font-weight: 400;
   font-size: 36px;
   line-height: 36px;
-  color: #222222;
+  color: #000000;
 }
 @media (min-width: 708px) {
   .form__title {
@@ -1369,7 +1369,7 @@
   font-weight: 400;
   line-height: 18px;
   text-transform: uppercase;
-  color: #222222;
+  color: #000000;
 }
 .form__program:last-child {
   margin-bottom: 0;
@@ -1443,7 +1443,7 @@
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
-  color: #222222;
+  color: #000000;
   border: none;
 }
 @media (min-width: 708px) {
@@ -1690,7 +1690,7 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
-  color: #111111;
+  color: #000000;
   text-transform: uppercase;
 }
 @media (min-width: 708px) {
