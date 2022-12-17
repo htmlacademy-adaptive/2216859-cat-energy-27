@@ -1657,6 +1657,9 @@
   }
 }
 .contacts {
+  position: relative;
+}
+.contacts__wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -1664,17 +1667,20 @@
   margin: 0 auto;
   padding-top: 26px;
   padding-bottom: 26px;
-  background-color: transparent;
+  background-color: #ffffff;
 }
 @media (min-width: 708px) {
-  .contacts {
+  .contacts__wrapper {
     width: 708px;
     padding: 56px 40px;
   }
 }
 @media (min-width: 1220px) {
-  .contacts {
+  .contacts__wrapper {
+    position: absolute;
     width: 405px;
+    top: 95px;
+    left: 110px;
   }
 }
 .contacts__heading {
@@ -1764,7 +1770,29 @@
   }
 }
 .social__link {
+  position: relative;
   text-decoration: none;
+}
+.social__link--vkontakte::before {
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 22px;
+  background-image: url("../img/vk.svg");
+}
+.social__link--youtube::before {
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 22px;
+  background-image: url("../img/youtube.svg");
+}
+.social__link--telegram::before {
+  position: absolute;
+  content: "";
+  width: 28px;
+  height: 22px;
+  background-image: url("../img/telegram.svg");
 }
 .copyright__link {
   display: flex;
