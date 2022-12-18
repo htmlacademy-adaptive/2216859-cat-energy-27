@@ -7,6 +7,12 @@
   justify-content: space-between;
   align-items: center;
 
+  @media (max-width: @mobile-width-only) {
+    &--nojs {
+      padding-bottom: 0;
+    }
+  }
+
   @media (min-width: @tablet-width) {
     width: 708px;
     padding: 24px 0 0 0;
@@ -116,6 +122,15 @@
     align-items: center;
   }
 }
+
+.nav--nojs .nav__list {
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    top: 0;
+    margin: 0;
+  }
+}
+
 
 .nav__item {
   padding: 22px 10px 24px 10px;
