@@ -46,6 +46,11 @@
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 707px) {
+  .nav--nojs {
+    padding-bottom: 0;
+  }
+}
 @media (min-width: 708px) {
   .nav {
     width: 708px;
@@ -145,6 +150,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+}
+@media (max-width: 707px) {
+  .nav--nojs .nav__list {
+    position: relative;
+    top: 0;
+    margin: 0;
   }
 }
 .nav__item {
@@ -1623,6 +1635,7 @@
   line-height: 18px;
   text-transform: uppercase;
   color: #444444;
+  border-style: solid;
   border-color: #e7e7e7;
 }
 .form__pet-data:hover,
@@ -1634,6 +1647,11 @@
 .form__owner-data:focus,
 .form__comment-area:focus {
   border-color: #444444;
+}
+.form__pet-data--error,
+.form__owner-data--error,
+.form__comment-area--error {
+  border-color: #ff8282;
 }
 @media (min-width: 708px) {
   .form__pet-data,
