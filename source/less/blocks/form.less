@@ -88,6 +88,10 @@
     margin-bottom: 0;
   }
 
+  &:disabled {
+    opacity: 0.3;
+  }
+
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
@@ -157,6 +161,10 @@
   text-transform: uppercase;
   color: @title-color;
   border: none;
+
+  &:disabled {
+    opacity: 0.3;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -266,6 +274,15 @@
   line-height: 18px;
   text-transform: uppercase;
   color: @primary-text-color;
+  border-color: rgba(231, 231, 231, 1);
+
+  &:hover {
+    border-color: rgba(205, 205, 205, 1);
+  }
+
+  &:focus {
+    border-color: @primary-text-color;
+  }
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
@@ -334,6 +351,15 @@
   text-transform: uppercase;
   color: rgba(255, 255, 255, 1);
   background-color: @primary-button-color;
+  border: none;
+
+  &:hover {
+    background-color: rgba(94, 170, 47, 1);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 
   @media (min-width: @tablet-width) {
     width: 282px;
