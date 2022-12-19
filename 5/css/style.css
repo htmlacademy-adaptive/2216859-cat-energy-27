@@ -593,10 +593,11 @@
   .advantages__list {
     width: 633px;
     display: grid;
+    padding-bottom: 47px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 280px);
     gap: 37px 137px;
-    padding-bottom: 47px;
+    counter-reset: list1;
   }
 }
 @media (min-width: 1220px) {
@@ -658,11 +659,15 @@
     align-content: center;
   }
   .advantages__item::before {
-    content: "";
+    content: counter(list1) "";
+    counter-increment: list1;
+    color: #f2f2f2;
+    font-size: 280px;
     grid-column: 1/3;
     width: 80px;
     height: 80px;
     background-repeat: no-repeat;
+    z-index: -1;
   }
 }
 .advantages__description {
