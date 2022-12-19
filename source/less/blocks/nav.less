@@ -1,39 +1,120 @@
 .nav {
-  margin: 0;
   width: 280px;
-  display: flex;
+  margin: 0 auto;
+  padding: 10px 0 17px 0;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
   justify-content: space-between;
-}
+  align-items: center;
 
-@media (min-width: @tablet-width) {
-  .nav {
+  @media (max-width: @mobile-width-only) {
+    &--nojs {
+      padding-bottom: 0;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
     width: 708px;
+    padding: 24px 0 0 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 1220px;
+    padding: 53px 0 29px 0;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .nav {
-    width: 1220px;
+.nav__toggle {
+  position: absolute;
+  padding: 0;
+  top: 20px;
+  right: 38px;
+  width: 24px;
+  height: 22px;
+  cursor: pointer;
+  justify-self: end;
+  border: none;
+  background-color: transparent;
+
+  @media (min-width: @tablet-width) {
+    display: none;
   }
 }
+
+.nav--nojs .nav__toggle {
+  display: none;
+}
+
+.nav--closed .nav__toggle {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 2px;
+    right: 0;
+    width: 24px;
+    height: 2px;
+    background-color: @title-color;
+    box-shadow: 0 8px 0 0 @title-color, 0 16px 0 0 @title-color;
+  }
+}
+
+.nav--opened .nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 10px;
+    left: 0;
+    width: 24px;
+    height: 2px;
+    background-color: rgb(0, 0, 1);
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .nav--closed .nav__list {
+    display: none;
+  }
+}
+
 
 .nav__list {
+  position: absolute;
   padding: 0;
+  margin: 0;
+  width: 100%;
+  left: 0;
+  top: 67px;
+  grid-column: 1/4;
+  display: block;
   list-style-type: none;
-}
+  background-color: rgba(255, 255, 255, 1);
+  z-index: 1;
 
-@media (min-width: @tablet-width) {
-  .nav__list {
+  @media (min-width: @tablet-width) {
+    position: relative;
     width: 440px;
     margin-right: 0;
+    top: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: transparent;
   }
-}
 
-@media (min-width: @desktop-width) {
-  .nav__list {
+  @media (min-width: @desktop-width) {
     width: 478px;
     margin-right: 0;
     display: flex;
@@ -42,7 +123,37 @@
   }
 }
 
+.nav--nojs .nav__list {
+  @media (max-width: @mobile-width-only) {
+    position: relative;
+    top: 0;
+    margin: 0;
+    padding-top: 17px;
+  }
+}
+
+
+.nav__item {
+  padding: 22px 10px 24px 10px;
+  border-bottom: 1px solid rgba(230, 230, 230, 1);
+  text-align: center;
+
+  &:first-child {
+    border-top: 1px solid rgba(230, 230, 230, 1);
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+    border: none;
+
+    &:first-child {
+      border: none;
+    }
+  }
+}
+
 .nav__link {
+  position: relative;
   font-family: "Oswald", sans-serif;
   font-size: 20px;
   font-weight: 500;
@@ -50,33 +161,41 @@
   color: rgba(17, 17, 17, 1);
   text-transform: uppercase;
   text-decoration: none;
-}
 
-@media (min-width: @tablet-width) {
-  .nav__link {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+
+  @media (min-width: @tablet-width) {
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
-  }
-}
 
-@media (min-width: @desktop-width) {
-  .nav__link {
+    &--active::after {
+      position: absolute;
+      content: "";
+      right: 0;
+      left: 0;
+      bottom: -10px;
+      height: 2px;
+      background-color: @primary-button-color;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
     color: rgb(255, 255, 255);
+
+    &--active::after {
+      background-color: rgba(255, 255, 255, 1);
+    }
   }
 }
 
-@media (min-width: @tablet-width) {
-  .nav__toggle {
-    display: none;
-  }
-}
-
-@media (min-width: @desktop-width) {
-  .nav__toggle {
-    display: none;
-  }
-}

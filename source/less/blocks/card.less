@@ -8,11 +8,10 @@
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
-  align-items: end;
-}
+  align-items: center;
 
-@media (min-width: @tablet-width) {
-  .card {
+  @media (min-width: @tablet-width) {
+    padding: 0 36px 39px 36px;
     margin: 0;
     grid-template-areas:
       "img"
@@ -20,29 +19,50 @@
       "features"
       "order";
     grid-template-columns: 1fr;
-    grid-template-rows: 3fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr repeat(3, min-content);
     align-items: center;
+    background-color: @basic-grey;
   }
 }
 
 .card__link {
   margin: 0 auto;
   grid-area: img;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 34px;
+  }
 }
 
+.card__title {
+  margin: 0;
+  margin-right: 64px;
+  padding-bottom: 18px;
+
+  @media (min-width: @tablet-width) {
+    margin: 0;
+    padding-bottom: 21px;
+    text-align: center;
+  }
+}
 
 .card__title a {
   grid-area: title;
-  margin: 0;
   padding: 0;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.25;
   text-decoration: none;
   text-transform: uppercase;
   color: rgba(34, 34, 34, 1);
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 1.2;
+  }
 }
+
 
 .card__features {
   grid-area: features;
@@ -50,30 +70,39 @@
 
 .card__order {
   grid-area: order;
+  margin-top: 11px;
   padding: 10px 20px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 1.25;
   text-decoration: none;
   text-transform: uppercase;
   text-align: center;
   align-self: center;
   color: rgba(255, 255, 255, 1);
-  background-color: rgba(104, 183, 56, 1);
+  background-color: @primary-button-color;
+
+  &:hover {
+    background-color: rgba(94, 170, 47, 1);
+  }
+
+  &:active {
+    color: rgba(255, 255, 255, 0.3);
+  }
 }
 
 .card__text {
   font-size: 14px;
   font-weight: 400;
-  line-height: 14px;
-  color: rgba(68, 68, 68, 1);
+  line-height: 1;
+  color: @primary-text-color;
 }
 
 .card__price {
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
-  line-height: 16px;
-  color: rgba(68, 68, 68, 1);
+  line-height: 1;
+  color: @primary-text-color;
 }

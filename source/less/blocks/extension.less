@@ -1,22 +1,79 @@
 .extension__wrapper {
+  // position: relative;
   display: flex;
   flex-direction: column;
+  padding-top: 78px;
+  padding-bottom: 25px;
+
+  @media (min-width: @tablet-width) {
+    // box-sizing: border-box;
+    padding: 161px 38px 38px 37px;
+    border: solid 2px @basic-grey;
+  }
 }
 
 .extension__title {
+  position: relative;
+  padding-bottom: 8px;
+  margin: 0;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
   text-transform: uppercase;
-  color: rgba(17, 17, 17, 1);
+  color: @title-color;
   text-align: center;
+
+  &::before {
+    position: absolute;
+    content: "";
+    bottom: 50px;
+    left: 125px;
+    width: 30px;
+    height: 30px;
+    background-image: url("../img/plus.svg");
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 23px;
+    font-size: 20px;
+    line-height: 22px;
+
+    &::before {
+      bottom: 110px;
+      left: 93px;
+      content: "";
+      width: 60px;
+      height: 60px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      content: "";
+      left: 53px;
+    }
+  }
 }
 
 .extension__text {
+  margin: 0;
   font-size: 12px;
   line-height: 16px;
   text-align: center;
+  padding: 0 30px 21px 30px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px 87px 40px;
+    font-size: 16px;
+    line-height: 18px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 0 87px 0;
+  }
 }
 
 .extension__to-all {
@@ -25,9 +82,17 @@
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
-  color: rgba(68, 68, 68, 1);
+  color: @primary-text-color;
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
-  background-color: rgba(242, 242, 242, 1);
+  background-color: @basic-grey;
+
+  &:hover {
+    background-color: rgba(235, 235, 235, 1);
+  }
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
 }
