@@ -25,9 +25,10 @@
 
 .nutrition__item {
   margin-bottom: 20px;
-  padding: 30px 20px 18px 20px;
+  padding: 30px 20px 18px;
   display: grid;
-  grid-template-columns: 1fr max-content;
+  grid-template-columns: 50px 1fr;
+  column-gap: 19px;
   justify-items: start;
   align-items: center;
   background-color: @basic-grey;
@@ -44,13 +45,15 @@
     content: "";
     width: 67px;
     height: 50px;
+    left: -9px;
     background-image: url("../img/mass.svg");
     justify-self: center;
   }
 
   @media (min-width: @tablet-width) {
-    padding: 77px 62px 53px 52px;
-    grid-template-columns: 1fr 1fr;
+    padding: 81px 52px 53px;
+    grid-template-columns: 1fr 200px;
+    column-gap: 54px;
 
     &--slim::before {
       grid-column: 2/3;
@@ -74,6 +77,10 @@
   }
 
   @media (min-width: @desktop-width) {
+    padding: 77px 52px 55px;
+    grid-template-columns: 100px 1fr;
+    column-gap: 62px;
+
     &--slim::before {
       grid-column: 1/2;
       grid-row: 1/2;
@@ -145,7 +152,6 @@
   }
 
   @media (min-width: @tablet-width) {
-    grid-column: 1/2;
     font-size: 20px;
     line-height: 30px;
   }
