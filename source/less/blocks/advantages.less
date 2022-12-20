@@ -58,9 +58,11 @@
 }
 
 .advantages__item {
+  margin: 0;
   position: relative;
   display: grid;
   grid-template-columns: min-content 1fr;
+  column-gap: 20px;
   align-items: center;
 
   &--leaf::before {
@@ -108,20 +110,22 @@
   }
 
   @media (min-width: @tablet-width) {
-    align-content: center;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
 
     &::before {
       content: "";
-      grid-column: 1/2;
       width: 80px;
       height: 80px;
       background-repeat: no-repeat;
     }
 
     &::after {
-      right: 0;
       position: absolute;
-      grid-column: 2/3;
+      right: -20px;
+      top: 91px;
       content: counter(list1) "";
       counter-increment: list1;
       color: rgb(242, 242, 242);
