@@ -1,13 +1,35 @@
+.logo {
+  width: 191px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 205px;
+    min-height: 60px;
+    justify-content: stretch;
+  }
+}
+
 .logo__icon {
   width: 33px;
   height: 37px;
   align-items: flex-start;
+
+  @media (min-width: @tablet-width) {
+    display: none;
+  }
 }
 
 .logo__text {
+  align-items: center;
   width: 101px;
   height: 18px;
-  align-items: center;
+
+  @media (min-width: @tablet-width) {
+    width: 202px;
+    height: 60px;
+  }
 }
 
 .logo__image {
