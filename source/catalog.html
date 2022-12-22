@@ -48,7 +48,10 @@
           <ul class="catalog__list">
             <li class="card">
               <a class="card__link" href="#" tabindex="-1">
-                <img class="card__image" src="img/chicken-500.png" width="68" height="86" alt="Cat energy pro с курицей 500&nbsp;г.">
+                <picture>
+                  <source media="(min-width: @tablet-width)" srcset="img/tablet-chiken500@1x.png 1x, img/tablet-chiken500@2x.png 2x">
+                  <img class="card__image" src="img/chicken-500.png" srcset="img/mobile-chicken500@2x.png 2x" width="68" height="86" alt="Cat energy pro с курицей 500&nbsp;г.">
+                </picture>
               </a>
               <h2 class="card__title">
                 <a href="#">Cat energy pro 500&nbsp;г</a>
