@@ -40,12 +40,18 @@
   width: 100%;
   margin: 0 auto;
 }
+.header__logo:hover {
+  opacity: 0.8;
+}
+.header__logo:active {
+  opacity: 0.6;
+}
 .nav {
   width: 280px;
   margin: 0 auto;
   padding: 10px 0 17px 0;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 1fr;
   justify-content: space-between;
   align-items: center;
 }
@@ -231,6 +237,9 @@
   justify-content: space-between;
   align-items: center;
 }
+.logo--image {
+  width: auto;
+}
 @media (min-width: 708px) {
   .logo {
     width: 205px;
@@ -275,20 +284,30 @@
   content: "";
   width: 100%;
   height: 302px;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/hero-mobile.jpg");
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/hero-mobile@1x.jpg");
   z-index: -1;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
+}
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .hero::before {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)) url("../img/hero-mobile@2x.jpg");
+  }
 }
 @media (min-width: 708px) {
   .hero::before {
     background-image: none;
   }
 }
+@media (min-width: 708px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 708px) and (min-resolution: 2dppx) {
+  .hero::before {
+    background-image: none;
+  }
+}
 @media (min-width: 1220px) {
   .hero::before {
-    background-image: url("../img/hero-desktop.jpg");
+    background-image: url("../img/hero-desktop@1x.jpg");
     width: 50%;
     height: 694px;
     bottom: 55px;
@@ -375,10 +394,18 @@
   margin-left: auto;
   margin-right: auto;
 }
+@media (min-width: 708px) {
+  .hero__image {
+    width: 709px;
+    height: 609px;
+  }
+}
 @media (min-width: 1220px) {
   .hero__image {
+    width: 552px;
+    height: 500px;
     grid-column: 2/3;
-    grid-row: 1/3;
+    grid-row: 1/4;
     margin: 0;
   }
 }
@@ -992,6 +1019,8 @@
 @media (min-width: 708px) {
   .card__link {
     margin-bottom: 34px;
+    width: 161px;
+    height: auto;
   }
 }
 .card__title {
@@ -1276,19 +1305,24 @@
   height: 100%;
   top: 0;
   left: 0;
-  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/bonus-image.png");
+  background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/bonus-image@1x.png");
   background-repeat: no-repeat;
   background-size: cover;
   z-index: -1;
 }
-@media (min-width: tablet-width) {
-  .extras__bonus {
-    width: 707px;
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+  .extras__bonus::before {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/bonus-image@2x.png");
   }
 }
-@media (min-width: 1220px) {
+@media (min-width: 708px) and (max-width: 1219px) {
   .extras__bonus::before {
-    width: 245px;
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/bonus-image-tablet@1x.png");
+  }
+}
+@media (min-width: 708px) and (max-width: 1219px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 708px) and (max-width: 1219px) and (min-resolution: 2dppx) {
+  .extras__bonus::before {
+    background-image: linear-gradient(rgba(104, 183, 56, 0.85), rgba(104, 183, 56, 0.85)), url("../img/bonus-image-tablet@2x.png");
   }
 }
 .extension__wrapper {
@@ -1318,7 +1352,7 @@
 .extension__title::before {
   position: absolute;
   content: "";
-  bottom: 50px;
+  bottom: 68px;
   left: 125px;
   width: 30px;
   height: 30px;
@@ -1934,14 +1968,6 @@
   align-items: center;
   list-style-type: none;
 }
-.social__logo {
-  padding: 39px 96px 32px 96px;
-}
-@media (min-width: 708px) {
-  .social__logo {
-    padding: 0;
-  }
-}
 .social__link {
   display: block;
   width: 28px;
@@ -1957,9 +1983,6 @@
   position: absolute;
   content: "";
   background-image: url("../img/vk.svg");
-}
-.social__link--vkontakte::before:hover {
-  fill: #68b738;
 }
 .social__link--youtube::before {
   position: absolute;
@@ -1984,6 +2007,14 @@
 .footer {
   width: 100%;
   background-color: #f2f2f2;
+}
+.footer__logo {
+  padding: 39px 96px 32px 96px;
+}
+@media (min-width: 708px) {
+  .footer__logo {
+    padding: 0;
+  }
 }
 .footer__copyright {
   width: 280px;
