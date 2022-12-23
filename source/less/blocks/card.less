@@ -26,11 +26,19 @@
 }
 
 .card__link {
+
   margin: 0 auto;
   grid-area: img;
 
   @media (min-width: @tablet-width) {
     margin-bottom: 34px;
+  }
+}
+
+.card__image {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    height: auto;
   }
 }
 
@@ -70,7 +78,6 @@
 
 .card__order {
   grid-area: order;
-  margin-top: 11px;
   padding: 10px 20px;
   font-family: "Oswald", sans-serif;
   font-size: 16px;

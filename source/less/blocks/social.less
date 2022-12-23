@@ -18,53 +18,43 @@
 }
 
 .social {
+  width: 132px;
   margin: 0;
   padding: 20px 94px;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
   align-items: center;
   list-style-type: none;
-
-  @media (min-width: @tablet-width) {
-    flex-direction: row;
-    padding: 0;
-  }
-}
-
-.social__logo {
-  padding: 39px 96px 32px 96px;
-
-  @media (min-width: @tablet-width) {
-    padding: 0;
-  }
 }
 
 
 .social__link {
+  display: block;
+  width: 28px;
+  height: 22px;
   position: relative;
   text-decoration: none;
+
+  &::before {
+    width: 28px;
+    height: 22px;
+  }
 
   &--vkontakte::before {
     position: absolute;
     content: "";
-    width: 28px;
-    height: 22px;
     background-image: url("../img/vk.svg");
   }
 
   &--youtube::before {
     position: absolute;
     content: "";
-    width: 28px;
-    height: 22px;
     background-image: url("../img/youtube.svg");
   }
 
   &--telegram::before {
     position: absolute;
     content: "";
-    width: 28px;
-    height: 22px;
     background-image: url("../img/telegram.svg");
   }
 }
