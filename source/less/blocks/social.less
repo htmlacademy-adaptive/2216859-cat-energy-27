@@ -34,27 +34,18 @@
   height: 22px;
   position: relative;
   text-decoration: none;
+  fill: rgba(102, 102, 102, 1);
+
+  &:hover {
+    fill: @primary-button-color;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 
   &::before {
     width: 28px;
     height: 22px;
-  }
-
-  &--vkontakte::before {
-    position: absolute;
-    content: "";
-    background-image: url("../img/vk.svg");
-  }
-
-  &--youtube::before {
-    position: absolute;
-    content: "";
-    background-image: url("../img/youtube.svg");
-  }
-
-  &--telegram::before {
-    position: absolute;
-    content: "";
-    background-image: url("../img/telegram.svg");
   }
 }
