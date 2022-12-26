@@ -21,7 +21,7 @@
 }
 .page__body {
   margin: 0 auto;
-  min-width: 320px;
+  min-width: 100vh;
   overflow-x: hidden;
   display: grid;
   grid-template-rows: min-content 1fr min-content;
