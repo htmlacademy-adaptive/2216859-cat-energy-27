@@ -262,34 +262,41 @@
       </section>
     </div>
     <footer class="footer">
-      <div class="social__wrapper">
-          <h2 class="social__heading visually-hidden">Наши социальные сети</h2>
-          <a class="social__logo logo" href="index.html">
-            <img class="logo__image" src="img/logo-text.svg" width="101" height="18" alt="Сat energy.">
-          </a>
-        <ul class="social">
+      <div class="footer__inner">
+        <a class="footer__logo logo" href="index.html">
+          <img class="logo__image" src="img/logo-text.svg" width="101" height="18" alt="Сat energy.">
+        </a>
+        <ul class="footer__social social">
           <li class="social__item">
-            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank" title="Мы во Вконтакте.">
-
+            <a class="social__link social__link--vkontakte" href="https://vk.com/htmlacademy" target="_blank" aria-label="Мы во Вконтакте.">
+              <svg aria-hidden="true" width="27" height="17">
+                <use href="img/sprite.svg#vk"/>
+              </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank" title="Мы на Ютубе.">
-
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru" target="_blank" aria-label="Мы на Ютубе.">
+              <svg aria-hidden="true" width="28" height="22">
+                <use href="img/sprite.svg#youtube"/>
+              </svg>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" target="_blank" title="Мы в Телеграме.">
-
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy" target="_blank" aria-label="Мы в Телеграме.">
+              <svg aria-hidden="true" width="28" height="22">
+                <use href="img/sprite.svg#telegram"/>
+              </svg>
             </a>
           </li>
             </ul>
-              <div class="footer__copyright copyright">
-                <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
-                  <img class="copyright__logo" src="img/logo_html.svg" width="27" height="34" alt="Логотип Академии.">
-                </a>
-              </div>
-            </div>
+        <div class="footer__copyright copyright">
+          <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+            <svg aria-hidden="true" width="27" height="34">
+              <use href="img/sprite.svg#html-academy"/>
+            </svg>
+          </a>
+        </div>
+      </div>
     </footer>
     <script src="js/script.js"></script>
   </body>
