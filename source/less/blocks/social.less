@@ -1,7 +1,18 @@
+* {
+  --out-width: 2px;
+  outline: var(--out-width) solid #ff0000;
+  outline-offset: calc(0px - var(--out-width));
+
+  &::before,
+  &::after {
+    outline: var(--out-width) solid #00ff00;
+    outline-offset: calc(0px - var(--out-width));
+  }
+}
+
 .social {
-  width: 132px;
   margin: 0;
-  padding: 20px 94px;
+  padding: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
