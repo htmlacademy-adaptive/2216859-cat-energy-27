@@ -51,7 +51,6 @@
   }
 }
 
-
 @media (min-width: @desktop-width) {
   .form__group {
     display: grid;
@@ -60,12 +59,10 @@
   }
 }
 
-.form__program-list {
+.form__program {
+  border: none;
   margin: 0;
   padding: 22px 0 19px 0;
-  border: none;
-  display: grid;
-  grid-template-columns: min-content 1fr;
 
   @media (min-width: @tablet-width) {
     padding: 25px 28px;
@@ -73,7 +70,59 @@
   }
 }
 
-.form__program {
+.form__program-list {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.form__program-item {
+  margin-top: 24px;
+}
+
+.form__program-label {
+  padding-left: 45px;
+
+  @media (min-height: @tablet-width) {
+    padding-left: 60px;
+  }
+}
+
+.form__program-mark {
+  position: absolute;
+  top: -6px;
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 1px solid rgb(205, 205, 205);
+
+  @media (min-width: @tablet-width) {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.form-input[type="radio"]:checked + .form__program-mark::before {
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  top: 9px;
+  left: 9px;
+  background-color: #68b738;
+  border-radius: 50%;
+  content: "";
+
+  @media (min-width: @tablet-width) {
+    width: 18px;
+    height: 18px;
+    top: 11px;
+    left: 11px;
+  }
+}
+
+.form__program-name {
+  position: relative;
   grid-column: 2/3;
   display: block;
   margin-bottom: 13px;
@@ -250,13 +299,13 @@
   grid-column: 1/-1;
   padding: 0;
   margin-bottom: 35px;
+  padding-top: 26px;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 26px;
   color: @title-color;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 76px;
     font-size: 36px;
     line-height: 36px;
   }

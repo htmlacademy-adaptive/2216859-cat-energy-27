@@ -65,14 +65,31 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form__program-list">
+        <fieldset class="form__program">
           <legend class="form__title visually-hidden">Выбор программы</legend>
-            <input class="visually-hidden" type="radio" id="slim" name="program" value="Похудение">
-            <label class="form__program" for="slim">Похудение</label>
-            <input class="visually-hidden" type="radio" id="gain" name="program" value="Набор массы">
-            <label class="form__program" for="gain">Набор массы</label>
-            <input class="visually-hidden" type="radio" id="advice" name="program" value="Не знаю">
-            <label class="form__program" for="advice">Не знаю (Нужен ваш совет)</label>
+          <ul class="form__program-list">
+            <li class="form__program-item">
+              <label class="form__program-name" for="slim">
+                <input class="form-input visually-hidden" type="radio" id="slim" name="program" value="Похудение" checked>
+                <span class="form__program-mark"></span>
+                <span class="form__program-label">Похудение</span>
+              </label>
+            </li>
+            <li class="form__program-item">
+              <label class="form__program-name" for="gain">
+                <input class="form-input visually-hidden" type="radio" id="gain" name="program" value="Набор массы">
+                <span class="form__program-mark"></span>
+                <span class="form__program-label">Набор массы</span>
+              </label>
+            </li>
+            <li class="form__program-item">
+              <label class="form__program-name" for="advice">
+                <input class="form-input visually-hidden" type="radio" id="advice" name="program" value="Не знаю">
+                <span class="form__program-mark"></span>
+                <span class="form__program-label">Не знаю (нужен ваш совет)</span>
+              </label>
+            </li>
+          </ul>
         </fieldset>
       </div>
         <fieldset class="form__owner">
