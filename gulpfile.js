@@ -10,6 +10,8 @@ import htmlmin from 'gulp-htmlmin';
 import svgmin from 'gulp-svgmin';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
+import svgstore from 'gulp-svgstore';
+import svgo from 'gulp-svgo';
 
 
 
@@ -36,6 +38,32 @@ export const optimizeImages = () => {
 
 export const copyImages = () => {
   return gulp.src('source/img/*.{jpg,png}')
+  .pipe(gulp.dest('build/img'));
+}
+
+//Webp
+export const createWebp  = () => {
+return gulp.src('source/img/*.{jpg,png}')
+.pipe (squoosh({
+  webp: {}
+}))
+.pipe(gulp.dest('build/img'));
+}
+
+//SVG
+export const svg = () => {
+  return gulp.src(['source/img/*.svg', '!source/img/icons/*.svg'])
+  .pipe(svgo())
+  .pipe(gulp.dest('build/img'));
+}
+
+export const sprite = () => {
+  return gulp.src('source/img/icons/*.svg')
+  .pipe(svgo())
+  .pipe(svgstore({
+    inlineSvg: true
+  }))
+  .pipe(rename('sprite.svg'))
   .pipe(gulp.dest('build/img'));
 }
 
