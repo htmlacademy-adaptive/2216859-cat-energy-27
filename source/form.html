@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Подбор программы</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
     <link rel="icon" href="favicon.ico" >
     <link rel="icon" href="images/favicons/32.svg" type="image/svg">
     <link rel="apple-touch-icon" href="images/favicons/apple-icon.png">
@@ -65,14 +65,31 @@
             </li>
           </ul>
         </fieldset>
-        <fieldset class="form__program-list">
+        <fieldset class="form__program">
           <legend class="form__title visually-hidden">Выбор программы</legend>
-            <input class="visually-hidden" type="radio" id="slim" name="program" value="Похудение">
-            <label class="form__program" for="slim">Похудение</label>
-            <input class="visually-hidden" type="radio" id="gain" name="program" value="Набор массы">
-            <label class="form__program" for="gain">Набор массы</label>
-            <input class="visually-hidden" type="radio" id="advice" name="program" value="Не знаю">
-            <label class="form__program" for="advice">Не знаю (Нужен ваш совет)</label>
+          <ul class="form__program-list">
+            <li class="form__program-item">
+              <label class="form__program-name" for="slim">
+                <input class="form-input visually-hidden" type="radio" id="slim" name="program" value="Похудение" checked>
+                <span class="form__program-mark"></span>
+                <span class="form__program-label">Похудение</span>
+              </label>
+            </li>
+            <li class="form__program-item">
+              <label class="form__program-name" for="gain">
+                <input class="form-input visually-hidden" type="radio" id="gain" name="program" value="Набор массы">
+                <span class="form__program-mark"></span>
+                <span class="form__program-label">Набор массы</span>
+              </label>
+            </li>
+            <li class="form__program-item">
+              <label class="form__program-name" for="advice">
+                <input class="form-input visually-hidden" type="radio" id="advice" name="program" value="Не знаю">
+                <span class="form__program-mark"></span>
+                <span class="form__program-label">Не знаю (нужен ваш совет)</span>
+              </label>
+            </li>
+          </ul>
         </fieldset>
       </div>
         <fieldset class="form__owner">
@@ -174,8 +191,8 @@
         </a>
       </li>
         </ul>
-    <div class="footer__copyright copyright">
-      <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
+    <div class="footer__copyright">
+      <a class="footer__link" href="https://htmlacademy.ru/intensive/adaptive">HTML Academy
         <svg aria-hidden="true" width="27" height="34">
           <use href="img/sprite.svg#html-academy"/>
         </svg>

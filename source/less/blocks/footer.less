@@ -4,6 +4,7 @@
 }
 
 .footer__inner {
+  width: 320px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -12,8 +13,9 @@
   @media (min-width: @tablet-width) {
     width: 708px;
     padding: 58px 0 55px 0;
-    flex-direction: row;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    column-gap: 120px;
   }
 
   @media (min-width: @desktop-width) {
@@ -37,5 +39,27 @@
   @media (min-width: @tablet-width) {
     width: 163px;
     padding: 0;
+    justify-self: end;
+  }
+}
+
+.footer__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  color: @primary-text-color;
+  text-decoration: none;
+  fill: rgba(102, 102, 102, 1);
+
+  &:hover {
+    fill: @primary-button-color;
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
   }
 }
