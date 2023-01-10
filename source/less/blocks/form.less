@@ -1,9 +1,13 @@
+.form {
+  overflow-x: hidden;
+}
+
 .form__wrapper {
   width: 280px;
   margin: 0 auto;
 
   @media (min-width: @tablet-width) {
-    width: 708px;
+    width: 628px;
   }
 
   @media (min-width: @desktop-width) {
@@ -324,6 +328,22 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 1000%;
+      top: 75%;
+      background-color: @primary-button-color;
+      z-index: -1;
+      right: calc(100% + 40px);
+    }
+
+    &::after {
+      top: 75%;
+      left: calc(100% + 40px);
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -357,6 +377,21 @@
   @media (min-width: @tablet-width) {
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 1000%;
+      top: 75%;
+      background-color: @primary-button-color;
+      z-index: -1;
+      right: calc(100% + 40px);
+    }
+
+    &::after {
+      left: calc(100% + 40px);
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -390,6 +425,21 @@
     grid-column: 1/-1;
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 2px;
+      width: 1000%;
+      top: 50%;
+      background-color: @primary-button-color;
+      z-index: -1;
+      right: calc(100% + 40px);
+    }
+
+    &::after {
+      left: calc(100% + 40px);
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -519,6 +569,7 @@
 
   @media (min-width: @tablet-width) {
     width: 282px;
+    margin: 0;
     padding: 13px 45px;
     font-size: 20px;
   }
