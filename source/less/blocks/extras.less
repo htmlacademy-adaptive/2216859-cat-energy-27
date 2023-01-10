@@ -9,6 +9,8 @@
 }
 
 .extras__heading {
+  position: relative;
+  display: inline-block;
   margin: 0;
   padding-top: 25px;
   padding-bottom: 36px;
@@ -16,7 +18,17 @@
   font-size: 24px;
   font-weight: 400;
   line-height: 24px;
-  background-color: ;
+
+  &::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    height: 2px;
+    width: 1000%;
+    background-color: @primary-button-color;
+    z-index: -1;
+    left: calc(100% + 21px);
+  }
 
   @media (min-width: @tablet-width) {
     padding-left: 37px;
@@ -24,6 +36,25 @@
     padding-bottom: 80px;
     font-size: 36px;
     line-height: 36px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 50%;
+      height: 2px;
+      width: 1000%;
+      background-color: @primary-button-color;
+      z-index: -1;
+      right: 100%;
+    }
+
+    &::after {
+      left: calc(100% + 36px);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: -40px;
   }
 }
 
