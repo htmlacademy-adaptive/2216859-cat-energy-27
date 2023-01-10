@@ -357,7 +357,7 @@
   // grid-column: 1/-1;
   padding: 0;
   margin-bottom: 35px;
-  padding-top: 26px;
+  margin-top: 26px;
   font-family: "Oswald", "Arial", sans-serif;
   font-size: 24px;
   line-height: 26px;
@@ -368,7 +368,7 @@
     content: "";
     height: 2px;
     width: 1000%;
-    bottom: 20%;
+    top: 50%;
     background-color: @primary-button-color;
     z-index: -1;
     left: calc(100% + 22px);
@@ -383,7 +383,7 @@
       content: "";
       height: 2px;
       width: 1000%;
-      top: 75%;
+      top: 50%;
       background-color: @primary-button-color;
       z-index: -1;
       right: calc(100% + 40px);
@@ -438,6 +438,7 @@
     }
 
     &::after {
+      top: 50%;
       left: calc(100% + 40px);
     }
   }
