@@ -24,10 +24,12 @@
 }
 
 .footer__logo {
-  padding: 39px 96px 32px 96px;
+  padding: 39px 90px 32px 96px;
+  border-bottom: solid 1px @extras-line-color;
 
   @media (min-width: @tablet-width) {
     padding: 0;
+    border: none;
   }
 }
 
@@ -35,11 +37,15 @@
   width: 280px;
   padding-top: 22px;
   padding-bottom: 22px;
+  border-top: solid 1px @extras-line-color;
+  box-sizing: border-box;
+
 
   @media (min-width: @tablet-width) {
     width: 163px;
     padding: 0;
     justify-self: end;
+    border: none;
   }
 }
 

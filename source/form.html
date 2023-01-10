@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Подбор программы</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="icon" href="favicon.ico" >
-    <link rel="icon" href="images/favicons/32.svg" type="image/svg">
-    <link rel="apple-touch-icon" href="images/favicons/apple-icon.png">
+    <link rel="icon" href="img/favicons/32.svg" type="image/svg">
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
@@ -45,7 +48,7 @@
   <section class="form">
     <div class="form__wrapper">
       <h1 class="form__title">Подбор программы</h1>
-      <p class="form__text">Заполние анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="form__text">Заполние анкету, и мы подберем<br> программу питания для вашего кота</p>
       <form class="form__fields" action="https://echo.htmlacademy.ru/courses" method="post">
       <div class="form__group">
         <fieldset class="form__fields">
@@ -93,7 +96,7 @@
         </fieldset>
       </div>
         <fieldset class="form__owner">
-          <legend class="form__subtitle">Контактные данные (владельца кота)</legend>
+          <legend class="form__owner-subtitle">Контактные данные (владельца кота)</legend>
           <ul class="form__contacts-list">
             <li class="form__item">
               <label class="form__description" for="email-field">e-mail:<sup>*</sup></label>
@@ -106,8 +109,7 @@
           </ul>
         </fieldset>
         <fieldset class="form__comment">
-          <legend class="form__subtitle">Комментарий</legend>
-            <label class="form__subtitle visually-hidden" for="comment-field">Комментарии</label>
+          <legend class="form__comment-subtitle">Комментарий</legend>
             <textarea class="form__comment-area" id="comment-field" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
         <fieldset class="form__extra">
