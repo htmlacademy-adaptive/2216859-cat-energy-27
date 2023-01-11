@@ -296,6 +296,7 @@
 }
 
 .form__item {
+  position: relative;
   margin-bottom: 14px;
   display: grid;
   grid-template-columns: max-content 1fr;
@@ -533,9 +534,6 @@
   color: @primary-text-color;
   border-style: solid;
   border-color: rgba(231, 231, 231, 1);
-  background-image: url("/img/icons/email.svg");
-  background-repeat: no-repeat;
-  background-position: calc(100% - 12px) center;
 
   &:hover {
     border-color: rgba(205, 205, 205, 1);
@@ -572,10 +570,6 @@
   color: @primary-text-color;
   border-style: solid;
   border-color: rgba(231, 231, 231, 1);
-  background-image: url("/img/icons/phone.svg");
-  background-repeat: no-repeat;
-  background-position: calc(100% - 12px) center;
-
 
   &:hover {
     border-color: rgba(205, 205, 205, 1);
@@ -600,6 +594,24 @@
     line-height: 30px;
   }
 }
+
+.form__owner-icon {
+  position: absolute;
+  left: (100% - 10px);
+  fill: none;
+  stroke: rgba(34, 34, 34, 1);
+}
+
+.form__owner-phone:focus + .form__owner-icon,
+.form__owner-email:focus + .form__owner-icon {
+  stroke: @primary-button-color;
+}
+
+.form__owner-phone--error + .form__owner-icon,
+.form__owner-email--error + .form__owner-icon {
+  stroke: rgba(255, 130, 130, 1);
+}
+
 
 .form__description {
   font-family: "Oswald", "Arial", sans-serif;
