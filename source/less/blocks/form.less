@@ -533,6 +533,9 @@
   color: @primary-text-color;
   border-style: solid;
   border-color: rgba(231, 231, 231, 1);
+  background-image: url("/img/icons/email.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 12px) center;
 
   &:hover {
     border-color: rgba(205, 205, 205, 1);
@@ -547,6 +550,7 @@
   }
 
   @media (min-width: @tablet-width) {
+    background-position: calc(100% - 16px) center;
     font-size: 20px;
     line-height: 30px;
   }
@@ -568,9 +572,9 @@
   color: @primary-text-color;
   border-style: solid;
   border-color: rgba(231, 231, 231, 1);
-  background-image: url("../img/icons/phone.svg");
+  background-image: url("/img/icons/phone.svg");
   background-repeat: no-repeat;
-  background-position: calc(100% - 15px) center;
+  background-position: calc(100% - 12px) center;
 
 
   &:hover {
@@ -588,6 +592,7 @@
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
+    background-position: calc(100% - 16px) center;
   }
 
   @media (min-width: @desktop-width) {
