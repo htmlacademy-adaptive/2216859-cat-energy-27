@@ -487,7 +487,6 @@
 }
 
 .form__pet-data,
-.form__owner-data,
 .form__comment-area {
   width: 100%;
   padding: 14px;
@@ -499,6 +498,80 @@
   color: @primary-text-color;
   border-style: solid;
   border-color: rgba(231, 231, 231, 1);
+
+  &:hover {
+    border-color: rgba(205, 205, 205, 1);
+  }
+
+  &:focus {
+    border-color: @primary-text-color;
+  }
+
+  &--error {
+    border-color: rgba(255, 130, 130, 1);
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form__owner-email {
+  width: 100%;
+  padding: 14px;
+  box-sizing: border-box;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @primary-text-color;
+  border-style: solid;
+  border-color: rgba(231, 231, 231, 1);
+
+  &:hover {
+    border-color: rgba(205, 205, 205, 1);
+  }
+
+  &:focus {
+    border-color: @primary-text-color;
+  }
+
+  &--error {
+    border-color: rgba(255, 130, 130, 1);
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+.form__owner-phone {
+  width: 100%;
+  padding: 14px;
+  box-sizing: border-box;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @primary-text-color;
+  border-style: solid;
+  border-color: rgba(231, 231, 231, 1);
+  background-image: url("../img/icons/phone.svg");
+  background-repeat: no-repeat;
+  background-position: calc(100% - 15px) center;
+
 
   &:hover {
     border-color: rgba(205, 205, 205, 1);
