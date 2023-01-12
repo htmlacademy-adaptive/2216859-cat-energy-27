@@ -114,14 +114,31 @@
                             <p class="example__summ">&nbsp;15 000 руб</p>
                         </div>
                     </div>
-                    <div class="example__slider">
+                    <div id="image-comparison" class="example__slider slider">
+                      <div class="slider__before">
                         <picture>
-                          <source type="image/webp" media="(min-width: 708px)" srcset="img/cat-slider-tablet@1x.webp 1x, img/cat-slider-tablet@2x.webp 2x">
-                          <source type="image/webp" srcset="img/cat-slider-mobile.webp 1x, img/cat-slider-mobile@2x.webp 2x">
+                          <source type="image/webp" media="(min-width: 708px)" srcset="img/tablet-before@1x.webp 1x, img/tablet-before@2x.webp 2x" width="560" height="512">
+                          <source type="image/webp" srcset="img/mobile-before@1x.webp 1x, img/mobile-before@2x.webp 2x" width="280" height="256">
 
-                          <source media="(min-width: 708px)" srcset="img/cat-slider-tablet@1x.png, img/cat-slider-tablet@2x.png 2x">
-                          <img class="example__image" src="img/cat-slider-mobile.png" srcset="img/cat-slider-mobile@2x.png 2x" width="280" height="256" alt="Слайдер с котом.">
+                          <source media="(min-width: 708px)" srcset="img/tablet-before@1x.png, img/tablet-before@2x.png 2x" width="560" height="512">
+                          <img class="compare__image slider__image slider__image--state_before" src="img/mobile-before@1x.png" srcset="img/mobile-before@2x.png 2x" width="280" height="256" alt="Кот до.">
                         </picture>
+                      </div>
+
+                      <div class="slider__curtain">
+                        <button class="slider__thumb" type="button">
+                          <span class="visually-hidden">Ползунок слайдера</span>
+                        </button>
+                      </div>
+                      <div class="slider__after">
+                        <picture>
+                          <source type="image/webp" media="(min-width: 708px)" srcset="img/tablet-after@1x.webp 1x, img/tablet-after@2x.webp 2x" width="560" height="512">
+                          <source type="image/webp" srcset="img/mobile-after@1x.webp 1x, img/mobile-after@2x.webp 2x" width="280" height="256">
+
+                          <source media="(min-width: 708px)" srcset="img/tablet-after@1x.png, img/tablet-after@2x.png 2x" width="560" height="512">
+                          <img class="compare__image slider__image slider__image--state_after" src="img/mobile-after@1x.png" srcset="img/mobile-after@2x.png 2x" width="280" height="256" alt="Кот после.">
+                        </picture>
+                      </div>
                     </div>
                 </div>
             </section>
@@ -181,6 +198,7 @@
                 </div>
             </div>
         </footer>
+        <script src ="js/slider.js"></script>
         <script src="js/script.js"></script>
     </body>
 </html>
