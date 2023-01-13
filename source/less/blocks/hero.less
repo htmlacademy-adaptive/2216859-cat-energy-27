@@ -19,7 +19,7 @@
       background-image: url("../img/hero-desktop@1x.webp");
       width: 50%;
       height: 694px;
-      bottom: 30px;
+      bottom: 0;
       left: 50%;
       background-repeat: no-repeat;
       background-size: cover;
@@ -48,13 +48,14 @@
   }
 
   @media (min-width: @tablet-width) {
+    margin-bottom: -8px;
     width: 708px;
     background-image: none;
   }
 
   @media (min-width: @desktop-width) {
     width: 1220px;
-    margin-bottom: 82px;
+    margin-bottom: 81px;
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -70,12 +71,16 @@
   line-height: 36px;
 
   @media (min-width: @tablet-width) {
-    padding: 62px 0 0 87px;
+    padding: 28px 0 0 87px;
     margin-bottom: 41px;
     font-size: 60px;
     line-height: 60px;
     color: @title-color;
     text-align: left;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 50px 0 0 80px;
   }
 }
 
@@ -91,7 +96,8 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    padding-left: 87px;
+    padding-left: 90px;
+    padding-bottom: 48px;
     font-size: 20px;
     line-height: 20px;
     color: @title-color;
@@ -99,7 +105,8 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 52px;
+    padding-left: 80px;
+    padding-bottom: 49px;
     grid-column: 1/2;
   }
 }
@@ -110,14 +117,14 @@
   margin-right: auto;
 
   @media (min-width: @tablet-width) {
-    margin: -80px 20px 0 20px;
+    margin: -84px 0 0 0;
     width: 709px;
     height: auto;
   }
 
   @media (min-width: @desktop-width) {
     position: absolute;
-    top: 0;
+    top: -5px;
     right: 220px;
     width: 552px;
     grid-column: 2/3;
@@ -149,8 +156,8 @@
   }
 
   @media (min-width: @tablet-width) {
-    margin-left: 92px;
-    padding: 14px 26px;
+    margin-left: 90px;
+    padding: 18px 28px;
     font-size: 20px;
     line-height: 20px;
     grid-row: 3/4;

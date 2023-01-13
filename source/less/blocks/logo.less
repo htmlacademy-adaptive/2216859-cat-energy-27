@@ -26,6 +26,7 @@
   height: 18px;
 
   @media (min-width: @tablet-width) {
+    padding: 0;
     width: 174px;
     height: 52px;
   }
@@ -37,6 +38,11 @@
 }
 
 .logo__image {
+  @media (min-width: @tablet-width) {
+    width: 143px;
+    object-fit: fill;
+  }
+
   &:hover {
     opacity: 0.8;
   }
