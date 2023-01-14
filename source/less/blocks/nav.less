@@ -172,6 +172,7 @@
 
 
   @media (min-width: @tablet-width) {
+    margin-left: 3px;
     font-size: 18px;
     font-weight: 400;
     line-height: 24px;
@@ -181,16 +182,21 @@
       content: "";
       right: 0;
       left: 0;
-      bottom: -9px;
+      bottom: -6px;
       height: 2px;
       background-color: @primary-button-color;
     }
   }
 
   @media (min-width: @desktop-width) {
+    margin: 0;
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
+
+    &::after {
+      bottom: -8px;
+    }
 
     &--main {
       color: rgb(255, 255, 255);
