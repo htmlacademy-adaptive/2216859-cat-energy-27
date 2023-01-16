@@ -1,8 +1,8 @@
 .card {
   position: relative;
-  padding-top: 20px;
-  margin-bottom: 19px;
+  margin-bottom: 25px;
   display: grid;
+  align-items: center;
   grid-template-areas:
     "img title"
     "img features"
@@ -10,7 +10,6 @@
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
-  align-items: center;
 
   &::before {
     position: absolute;
@@ -43,12 +42,20 @@
 }
 
 .card__link {
-
+  height: 112px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   grid-area: img;
 
   @media (min-width: @tablet-width) {
+    height: 200px;
     margin-bottom: 34px;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 196px;
   }
 }
 
@@ -60,9 +67,7 @@
 }
 
 .card__title {
-  margin: 0;
-  margin-right: 64px;
-  padding-bottom: 13px;
+  margin: 10px 64px 0 0;
 
   @media (min-width: @tablet-width) {
     margin: 0;

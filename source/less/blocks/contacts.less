@@ -58,6 +58,15 @@
   color: @primary-text-color;
 }
 
+span::after {
+
+  @media (min-width: @tablet-width) {
+    content: "\A";
+    white-space: pre;
+  }
+}
+
+
 @media (min-width: @tablet-width) {
   .contacts__address {
     margin: 0;
