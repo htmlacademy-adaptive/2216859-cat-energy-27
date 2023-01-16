@@ -1,14 +1,44 @@
 .extension__wrapper {
-  // position: relative;
+  position: relative;
   display: flex;
   flex-direction: column;
   padding-top: 78px;
   padding-bottom: 25px;
 
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    height: 1px;
+    background-color: #e6e6e6;
+    width: 1000%;
+    left: -768px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: 0;
+    height: 1px;
+    background-color: #e6e6e6;
+    width: 1000%;
+    left: -768px;
+  }
+
   @media (min-width: @tablet-width) {
     // box-sizing: border-box;
     padding: 161px 38px 38px 37px;
     border: solid 2px @basic-grey;
+
+    &::before {
+      height: 0;
+    }
+
+    &::after {
+      height: 0;
+    }
   }
 }
 

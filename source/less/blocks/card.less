@@ -1,4 +1,6 @@
 .card {
+  position: relative;
+  padding-top: 20px;
   margin-bottom: 19px;
   display: grid;
   grid-template-areas:
@@ -9,6 +11,17 @@
   grid-template-columns: 1fr 1fr;
   justify-content: center;
   align-items: center;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    height: 1px;
+    background-color: #e6e6e6;
+    width: 1000%;
+    left: -768px;
+  }
 
   @media (min-width: @tablet-width) {
     padding: 0 36px 39px 36px;
@@ -22,6 +35,10 @@
     grid-template-rows: 1fr repeat(3, min-content);
     align-items: center;
     background-color: @basic-grey;
+
+    &::before {
+      height: 0;
+    }
   }
 }
 
@@ -45,7 +62,7 @@
 .card__title {
   margin: 0;
   margin-right: 64px;
-  padding-bottom: 18px;
+  padding-bottom: 13px;
 
   @media (min-width: @tablet-width) {
     margin: 0;
