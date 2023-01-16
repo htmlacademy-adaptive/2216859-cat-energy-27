@@ -1,5 +1,10 @@
 .contacts {
+  background-color: rgba(242, 242, 242, 1);
   position: relative;
+
+  &--main {
+    background-color: rgba(255, 255, 255, 1);
+  }
 }
 
 .contacts__wrapper {
@@ -10,7 +15,7 @@
   margin: 0 auto;
   padding-top: 26px;
   padding-bottom: 26px;
-  background-color: rgb(255, 255, 255);
+  background-color: transparent;
 
   @media (min-width: @tablet-width) {
     width: 628px;
@@ -23,6 +28,7 @@
     position: absolute;
     top: 95px;
     left: 110px;
+    background-color: rgba(255, 255, 255, 1);
   }
 }
 
