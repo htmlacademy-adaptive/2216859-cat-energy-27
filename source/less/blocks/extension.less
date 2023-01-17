@@ -87,9 +87,15 @@
   }
 }
 
-span::after {
-  content: "\A";
-  white-space: pre;
+.extension__title--empty-line::after {
+  content: none;
+}
+
+.extension__title .extension__title--empty-line::after {
+  @media (min-width: @tablet-width) {
+    content: "\A";
+    white-space: pre;
+  }
 }
 
 .extension__text {
