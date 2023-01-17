@@ -58,7 +58,11 @@
   color: @primary-text-color;
 }
 
-span::after {
+.contacts__adress--empty-line::after {
+  content: none;
+}
+
+.contacts__address .contacts__adress--empty-line::after {
   @media (min-width: @tablet-width) {
     content: "\A";
     white-space: pre;

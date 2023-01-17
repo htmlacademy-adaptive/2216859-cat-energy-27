@@ -5,7 +5,19 @@
   width: min(100%, 560px);
   aspect-ratio: 280/256;
   --curtain-place: 0.5;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
+    margin-top: -135px;
+    margin-bottom: 85px;
+    margin-right: 0;
+  }
 }
+
 
 img {
   width: 100%;
@@ -39,13 +51,13 @@ img {
   width: 4px;
   height: 100%;
   border-radius: 2px;
-  color: var(--curtain-color, #666666);
+  color: var(--curtain-color, rgb(102, 102, 102));
   background-color: currentColor;
   cursor: col-resize;
   transition: color 0.2s, opacity 0.2s;
 
   &:hover {
-    --curtain-color: #68b738;
+    --curtain-color: @primary-button-color;
   }
 
   &:active {
@@ -54,6 +66,7 @@ img {
 }
 
 .slider__thumb {
+  position: relative;
   box-sizing: border-box;
   display: grid;
   margin: -18px;
@@ -63,12 +76,14 @@ img {
   color: inherit;
   border: 2px solid currentColor;
   border-radius: 20px;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   cursor: col-resize;
 
   &::before {
+    position: absolute;
+    z-index: 2;
     content: "";
     background-color: currentColor;
-    mask-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 40 40'></svg>");
+    mask-image: url("data:image/svg+xml,<svg id='slider' xmlns='http://www.w3.org/2000/svg' width='24' height='18' fill='none' viewBox='0 0 24 18'></svg>");
   }
 }
