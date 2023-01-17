@@ -28,8 +28,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    // box-sizing: border-box;
-    padding: 161px 38px 38px 37px;
+    padding: 162px 38px 38px 37px;
     border: solid 2px @basic-grey;
 
     &::before {
@@ -70,7 +69,7 @@
     line-height: 22px;
 
     &::before {
-      bottom: 110px;
+      bottom: 112px;
       left: 93px;
       content: "";
       width: 60px;
@@ -86,6 +85,11 @@
       left: 53px;
     }
   }
+}
+
+span::after {
+  content: "\A";
+  white-space: pre;
 }
 
 .extension__text {

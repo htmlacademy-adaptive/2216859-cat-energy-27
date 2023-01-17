@@ -40,7 +40,7 @@
     &::before {
       position: absolute;
       content: "";
-      top: 50%;
+      top: 49%;
       height: 2px;
       width: 1000%;
       background-color: @primary-button-color;
@@ -49,6 +49,7 @@
     }
 
     &::after {
+      top: 49%;
       left: calc(100% + 36px);
     }
   }
@@ -76,8 +77,8 @@
 
   @media (min-width: @tablet-width) {
     padding: 26px 38px 28px;
-    grid-template-columns: repeat(4, 1fr);
-    border: 1px solid @extras-line-color;
+    grid-template-columns: repeat(3, 1fr) 90px;
+    border-inline: 1px solid @extras-line-color;
   }
 
   @media (min-width: @desktop-width) {
@@ -129,6 +130,7 @@
   color: @primary-text-color;
 
   @media (min-width: @tablet-width) {
+    margin-bottom: 24px;
     grid-column: 3/4;
     font-size: 16px;
     text-align: end;
