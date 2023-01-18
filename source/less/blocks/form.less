@@ -181,10 +181,6 @@
     margin-bottom: 0;
   }
 
-  &:disabled {
-    opacity: 0.3;
-  }
-
   @media (min-width: @tablet-width) {
     font-size: 20px;
     line-height: 30px;
@@ -193,6 +189,14 @@
       margin-bottom: 18px;
     }
   }
+}
+
+.form__program-name:hover .form__program-mark {
+  border-color: rgba(186, 186, 186, 1);
+}
+
+.form__program-name--disabled .form__program-mark {
+  opacity: 0.3;
 }
 
 .form__owner {
@@ -303,8 +307,12 @@
   }
 }
 
-.form__product-mark .form__product-label:hover {
-  border-color: #ff6347;
+.form__product:hover .form__product-mark {
+  border-color: rgba(186, 186, 186, 1);
+}
+
+.form__product--disabled .form__product-mark {
+  opacity: 0.3;
 }
 
 .form-input[type="checkbox"]:checked + .form__product-mark::before {
