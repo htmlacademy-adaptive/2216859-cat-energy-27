@@ -78,12 +78,16 @@ img {
   border-radius: 20px;
   background-color: rgb(255, 255, 255);
   cursor: col-resize;
+}
 
-  &::before {
-    position: absolute;
-    z-index: 2;
-    content: "";
-    background-color: currentColor;
-    mask-image: url("data:image/svg+xml,<svg id='slider' xmlns='http://www.w3.org/2000/svg' width='24' height='18' fill='none' viewBox='0 0 24 18'></svg>");
+.slider__button {
+  position: absolute;
+  fill: rgb(102, 102, 102);
+  top: 9px;
+  left: 6px;
+
+  &:hover {
+    stroke: @primary-button-color;
+    fill: @primary-button-color;
   }
 }

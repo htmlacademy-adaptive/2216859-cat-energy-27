@@ -24,7 +24,7 @@
     <svg id="phone" viewBox="0 0 20 20">
       <path stroke-linecap="round" stroke-linejoin="round" d="M10 10h8.5m0 0L16 7.5m2.5 2.5L16 12.5m-7.5-10v5h-3v5h3v5H6c-1.5 0-2.5-1-2.5-2.5V5c0-1.5 1-2.5 2.5-2.5h2.5Z"/>
     </svg>
-    <svg id="slider" viewBox="0 0 40 40">
-    <rect width="38" height="38" x="1" y="1" fill="#fff" rx="19"/><path fill="#666" d="m16 11-8 9 8 9V11ZM32 20l-8-9v18l8-9Z"/><rect width="38" height="38" x="1" y="1" stroke="#666" stroke-width="2" rx="19"/>
+    <svg id="slider" viewBox="0 0 24 18">
+    <path d="M8 0 0 9l8 9V0ZM24 9l-8-9v18l8-9Z"/>
     </svg>
 </svg>
