@@ -157,7 +157,7 @@
   height: 13px;
   top: 9px;
   left: 9px;
-  background-color: #68b738;
+  background-color: @primary-button-color;
   border-radius: 50%;
   content: "";
 
@@ -167,6 +167,10 @@
     top: 11px;
     left: 11px;
   }
+}
+
+.form-input[type="radio"]:focus + span {
+  border-color: @primary-button-color;
 }
 
 .form__program-name {
@@ -334,6 +338,10 @@
     top: 8px;
     left: 8px;
   }
+}
+
+.form-input[type="checkbox"]:focus + span {
+  border-color: @primary-button-color;
 }
 
 .form__item {
