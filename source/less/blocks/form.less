@@ -171,6 +171,11 @@
 
 .form-input[type="radio"]:focus + span {
   border-color: @primary-button-color;
+  outline: solid 1px @primary-button-color;
+}
+
+.form-input[type="radio"]:disabled + span + .form__program-label {
+  opacity: 0.3;
 }
 
 .form__program-name {
@@ -201,10 +206,6 @@
 
 .form__program-name:hover .form__program-mark {
   border-color: rgba(186, 186, 186, 1);
-}
-
-.form__program-name--disabled .form__program-mark {
-  opacity: 0.3;
 }
 
 .form__owner {
@@ -319,10 +320,6 @@
   border-color: rgba(186, 186, 186, 1);
 }
 
-.form__product--disabled .form__product-mark {
-  opacity: 0.3;
-}
-
 .form-input[type="checkbox"]:checked + .form__product-mark::before {
   position: absolute;
   width: 19px;
@@ -342,6 +339,11 @@
 
 .form-input[type="checkbox"]:focus + span {
   border-color: @primary-button-color;
+  outline: solid 1px @primary-button-color;
+}
+
+.form-input[type="checkbox"]:disabled + span + .form__product-label {
+  opacity: 0.3;
 }
 
 .form__item {
@@ -600,6 +602,12 @@
     font-size: 20px;
     line-height: 30px;
   }
+}
+
+.form__pet-data::-webkit-outerspin-button,
+.form__pet-data::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
 }
 
 .form__comment-area {

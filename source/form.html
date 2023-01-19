@@ -57,7 +57,7 @@
           <ul class="form__list">
             <li class="form__item">
               <label class="form__description" for="pet-name">имя:<sup>*</sup></label>
-              <input class="form__pet-data" id="pet-name" type="text" placeholder="барсик" name="pet-name" required>
+              <input class="form__pet-data" id="pet-name" type="text" placeholder="барсик" min="1" max="20" name="pet-name" required>
             </li>
             <li class="form__item">
               <label class="form__description" for="pet-weight">вес (кг):<sup>*</sup></label>
@@ -65,7 +65,7 @@
             </li>
             <li class="form__item">
               <label class="form__description" for="pet-age">возраст (лет):</label>
-              <input class="form__pet-data" id="pet-age" type="number" placeholder="7" name="pet-age">
+              <input class="form__pet-data" id="pet-age" type="number" placeholder="7" min="1" max="20" name="pet-age">
             </li>
           </ul>
         </fieldset>
@@ -81,7 +81,7 @@
             </li>
             <li class="form__program-item">
               <label class="form__program-name" for="gain">
-                <input class="form-input visually-hidden" type="radio" id="gain" name="program" value="Набор массы">
+                <input class="form-input visually-hidden" type="radio" id="gain" name="program" value="Набор массы" disabled>
                 <span class="form__program-mark"></span>
                 <span class="form__program-label">Набор массы</span>
               </label>
@@ -128,7 +128,7 @@
               </li>
               <li class="form__extra-item">
                 <label class="form__product" for="water">
-                  <input class="form-input visually-hidden" type="checkbox" id="water" name="water">
+                  <input class="form-input visually-hidden" type="checkbox" id="water" name="water" disabled>
                   <span class="form__product-mark"></span>
                   <span class="form__product-label">Питьевая вода</span>
                 </label>
@@ -169,9 +169,25 @@
   </section>
   <section class="map">
     <h2 class="map__title visually-hidden">Мы на карте</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003035!2d30.320858716011124!3d59.93871916905429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2srs!4v1671038544413!5m2!1sru!2srs" width="320" height="362" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    <!-- <img src="../img/location-mobile.jpg" width="320" height="362" alt="Мы находимся по адресу Санкт-Петербург, ул. Большая Конюшенная д. 19/8"> -->
-  </section>
+    <iframe class="map__api"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003035!2d30.320858716011124!3d59.93871916905429!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2srs!4v1671038544413!5m2!1sru!2srs"
+        width="320"
+        height="400"
+        style="border: 0;"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+    ></iframe>
+    <picture class="map__image">
+      <source type="image/webp" media="(min-width: 1220px)" srcset="../img/location-desktop@1x.webp, ../img/location-desktop@2x.webp 2x" width="1440" height="400">
+      <source type="image/webp" media="(min-width: 708px)" srcset="../img/location-tablet@1x.webp 1x, ../img/location-tablet@2x.webp 2x" width="768" height="400">
+      <source type="image/webp" srcset="../img/location-mobile.webp 1x, ../img/location-mobile@2x.webp 2x" width="320" height="362">
+
+      <source media="(min-width: 1220px)" srcset="../img/location-desktop@1x.jpg, ../img/location-desktop@2x.jpg 2x" width="1440" height="400">
+      <source media="(min-width: 708px)" srcset="../img/location-tablet@1x.jpg 1x, ../img/location-tablet@2x.jpg 2x" width="768" height="400">
+      <img src="../img/location-mobile.jpg" srcset="../img/location-mobile@2x.jpg 2x" width="320" height="362" alt="Мы находимся по адресу Санкт-Петербург, ул. Большая Конюшенная д. 19/8">
+    </picture>
+</section>
 </div>
 <footer class="footer">
   <div class="footer__inner">
@@ -210,6 +226,7 @@
     </div>
   </div>
 </footer>
+<script src ="js/map.js"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

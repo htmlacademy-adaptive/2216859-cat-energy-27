@@ -1,15 +1,24 @@
-.map iframe {
-
-  width: 100%;
-  display: block;
-  border: none;
+.map {
+  height: 362px;
 
   @media (min-width: @tablet-width) {
     height: 400px;
   }
 }
 
-// .map img {
-//   display: block;
-//   z-index: -1;
-// }
+.map .map__api {
+  position: absolute;
+  width: 100%;
+  display: block;
+  border: none;
+}
+
+
+.map__image {
+  position: relative;
+}
+
+.map--nojs {
+  position: fixed;
+  transform: scale(0);
+}
