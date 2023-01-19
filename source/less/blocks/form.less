@@ -173,6 +173,10 @@
   border-color: @primary-button-color;
 }
 
+.form-input[type="radio"]:disabled + span {
+  opacity: 0.3;
+}
+
 .form__program-name {
   position: relative;
   grid-column: 2/3;
@@ -319,10 +323,6 @@
   border-color: rgba(186, 186, 186, 1);
 }
 
-.form__product--disabled .form__product-mark {
-  opacity: 0.3;
-}
-
 .form-input[type="checkbox"]:checked + .form__product-mark::before {
   position: absolute;
   width: 19px;
@@ -342,6 +342,10 @@
 
 .form-input[type="checkbox"]:focus + span {
   border-color: @primary-button-color;
+}
+
+.form-input[type="checkbox"]:disabled + span {
+  opacity: 0.3;
 }
 
 .form__item {
