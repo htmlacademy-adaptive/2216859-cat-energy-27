@@ -57,7 +57,7 @@
           <ul class="form__list">
             <li class="form__item">
               <label class="form__description" for="pet-name">имя:<sup>*</sup></label>
-              <input class="form__pet-data" id="pet-name" type="text" placeholder="барсик" name="pet-name" required>
+              <input class="form__pet-data" id="pet-name" type="text" placeholder="барсик" min="1" max="20" name="pet-name" required>
             </li>
             <li class="form__item">
               <label class="form__description" for="pet-weight">вес (кг):<sup>*</sup></label>
@@ -65,7 +65,7 @@
             </li>
             <li class="form__item">
               <label class="form__description" for="pet-age">возраст (лет):</label>
-              <input class="form__pet-data" id="pet-age" type="number" placeholder="7" name="pet-age">
+              <input class="form__pet-data" id="pet-age" type="number" placeholder="7" min="1" max="20" name="pet-age">
             </li>
           </ul>
         </fieldset>
