@@ -1,17 +1,17 @@
 .features {
-  margin: 0;
+  margin: 4px 0 20px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(3, 1fr);
-}
+  align-items: center;
 
-@media (min-width: @tablet-width) {
-  .features {
-    margin-bottom: 33px;
+  @media (min-width: @tablet-width) {
+    margin: -3px 0 35px;
   }
 }
 
 .features__term {
+  position: relative;
   padding: 0;
   margin: 0;
   font-weight: 400;
@@ -22,6 +22,15 @@
 
   @media (min-width: @tablet-width) {
     font-size: 16px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      bottom: -9px;
+      height: 1px;
+      width: 200%;
+      background-color: rgba(205, 205, 205, 1);
+    }
   }
 }
 

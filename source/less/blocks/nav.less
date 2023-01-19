@@ -1,7 +1,7 @@
 .nav {
   width: 280px;
   margin: 0 auto;
-  padding: 10px 0 17px 0;
+  padding: 10px 0 14px 0;
   display: grid;
   grid-template-columns: 2fr 1fr;
   justify-content: space-between;
@@ -15,7 +15,7 @@
 
   @media (min-width: @tablet-width) {
     width: 708px;
-    padding: 24px 0 0 0;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -28,9 +28,10 @@
 }
 
 .nav__toggle {
-  position: absolute;
+  position: relative;
   padding: 0;
-  top: 20px;
+  top: 3px;
+  right: 0;
   width: 24px;
   height: 22px;
   cursor: pointer;
@@ -51,7 +52,7 @@
   &::before {
     content: "";
     position: absolute;
-    top: 2px;
+    top: 0;
     right: 0;
     width: 24px;
     height: 2px;
@@ -65,7 +66,7 @@
   &::after {
     content: "";
     position: absolute;
-    top: 10px;
+    top: 0;
     left: 0;
     width: 24px;
     height: 2px;
@@ -180,16 +181,21 @@
       content: "";
       right: 0;
       left: 0;
-      bottom: -10px;
+      bottom: -9px;
       height: 2px;
       background-color: @primary-button-color;
     }
   }
 
   @media (min-width: @desktop-width) {
+    margin: 0;
     font-size: 20px;
     font-weight: 400;
     line-height: 30px;
+
+    &::after {
+      bottom: -8px;
+    }
 
     &--main {
       color: rgb(255, 255, 255);

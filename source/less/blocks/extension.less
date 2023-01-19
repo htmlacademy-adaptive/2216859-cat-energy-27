@@ -1,20 +1,49 @@
 .extension__wrapper {
-  // position: relative;
+  position: relative;
   display: flex;
   flex-direction: column;
-  padding-top: 78px;
+  padding-top: 79px;
   padding-bottom: 25px;
 
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    height: 1px;
+    background-color: #e6e6e6;
+    width: 1000%;
+    left: -768px;
+  }
+
+  &::after {
+    position: absolute;
+    content: "";
+    display: block;
+    bottom: 0;
+    height: 1px;
+    background-color: #e6e6e6;
+    width: 1000%;
+    left: -768px;
+  }
+
   @media (min-width: @tablet-width) {
-    // box-sizing: border-box;
-    padding: 161px 38px 38px 37px;
+    padding: 162px 38px 38px 37px;
     border: solid 2px @basic-grey;
+
+    &::before {
+      content: none;
+    }
+
+    &::after {
+      content: none;
+    }
   }
 }
 
 .extension__title {
   position: relative;
-  padding-bottom: 8px;
+  padding-bottom: 9px;
   margin: 0;
   font-family: "Oswald", sans-serif;
   font-size: 16px;
@@ -27,7 +56,7 @@
   &::before {
     position: absolute;
     content: "";
-    bottom: 68px;
+    bottom: 50px;
     left: 125px;
     width: 30px;
     height: 30px;
@@ -40,7 +69,7 @@
     line-height: 22px;
 
     &::before {
-      bottom: 110px;
+      bottom: 112px;
       left: 93px;
       content: "";
       width: 60px;
@@ -55,6 +84,17 @@
       content: "";
       left: 53px;
     }
+  }
+}
+
+.extension__empty-line::after {
+  content: none;
+}
+
+.extension__title .extension__empty-line::after {
+  @media (min-width: @tablet-width) {
+    content: "\A";
+    white-space: pre;
   }
 }
 

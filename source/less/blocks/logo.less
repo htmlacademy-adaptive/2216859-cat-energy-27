@@ -20,17 +20,29 @@
 }
 
 .logo__text {
+  padding-top: 7px;
   align-items: center;
-  width: 101px;
+  width: 95px;
   height: 18px;
 
   @media (min-width: @tablet-width) {
+    padding: 0;
+    width: 174px;
+    height: 52px;
+  }
+
+  @media (min-width: @desktop-width) {
     width: 202px;
     height: 60px;
   }
 }
 
 .logo__image {
+  @media (min-width: @tablet-width) {
+    width: 143px;
+    object-fit: fill;
+  }
+
   &:hover {
     opacity: 0.8;
   }

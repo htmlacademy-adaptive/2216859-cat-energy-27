@@ -1,5 +1,28 @@
 .example {
+  position: relative;
   background-color: rgba(234, 234, 234, 1);
+
+  @media (min-width: @tablet-width) {
+    background-image: linear-gradient(rgb(255, 255, 255) 56%, rgba(242, 242, 242, 1) 56% 100%);
+
+    &::before {
+      position: absolute;
+      content: "";
+      display: block;
+      top: -42px;
+      height: 1px;
+      background-color: rgb(230, 230, 230);
+      width: 100%;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    background-image: linear-gradient(rgb(255, 255, 255) 28%, rgba(242, 242, 242, 1) 28% 77%);
+
+    &::before {
+      height: 0;
+    }
+  }
 }
 
 .example__container {
@@ -24,14 +47,14 @@
 
   @media (min-width: @tablet-width) {
     width: 708px;
-    padding-bottom: 100px;
+    padding-bottom: 0;
   }
 
   @media (min-width: @desktop-width) {
     width: 1220px;
     display: flex;
-    padding-bottom: 85px;
-    justify-content: space-between;
+    flex-direction: row;
+    align-items: flex-start;
   }
 }
 
@@ -41,20 +64,23 @@
   flex-direction: column;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 100px;
+    padding-bottom: 99px;
     flex-direction: row;
     justify-content: space-between;
   }
 
   @media (min-width: @desktop-width) {
+    padding-bottom: 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    justify-items: start;
     width: 436px;
   }
 }
 
 .example__title {
-  padding-bottom: 40px;
+  width: 280px;
+  padding: 25px 0 40px;
   margin: 0 auto;
   font-family: "Oswald", sans-serif;
   font-size: 36px;
@@ -63,13 +89,17 @@
   color: @title-color;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 63px;
+    width: 708px;
+    padding: 3px 32px 63px;
     font-size: 60px;
     line-height: 60px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 76px;
+    width: 1220px;
+    margin: 0 auto;
+    padding-top: 42px;
+    padding-bottom: 75px;
   }
 }
 
@@ -88,7 +118,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 69px;
+    padding: 70px 2px 69px;
     grid-column: 1/3;
     grid-row: 1/2;
   }
@@ -102,9 +132,14 @@
   column-gap: 32px;
   list-style-type: none;
 
+  @media (min-width: @tablet-width) {
+    column-gap: 43px;
+  }
+
   @media (min-width: @desktop-width) {
-    padding-bottom: 55px;
+    padding-bottom: 44px;
     grid-column: 1/3;
+    justify-items: start;
   }
 }
 
@@ -113,35 +148,48 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid @extras-line-color;
-  border-radius: 3px;
-}
-
-.example__item p {
-  margin: 0;
 }
 
 .example__text {
+  margin: 0;
+  margin-top: -7px;
+  width: 77px;
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
+  text-align: center;
   color: @primary-text-color;
+  background-color: rgba(234, 234, 234, 1);
 
   @media (min-width: @tablet-width) {
+    width: auto;
+    padding: 0 10px;
     font-size: 14px;
     line-height: 14px;
+    background-color: rgb(255, 255, 255);
+  }
+
+  @media (min-width: @desktop-width) {
+    background-color: rgba(242, 242, 242, 1);
   }
 }
 
 .example__number {
-  padding: 15px 21px 7px;
+  margin: 0;
+  width: 124px;
+  padding: 15px 0;
   font-family: "Oswald", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 24px;
+  text-align: center;
+  outline: solid 1px rgba(205, 205, 205, 1);
+  border-radius: 3px;
+  text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    padding: 15px 30px 11px;
+    width: 162px;
+    padding: 15px 0 18px;
     font-size: 30px;
     line-height: 37px;
   }
@@ -157,9 +205,10 @@
   text-transform: uppercase;
 
   @media (min-width: @tablet-width) {
-    padding: 0;
+    padding: 11px 3px 0;
     grid-column: 3/4;
     flex-direction: column;
+    row-gap: 10px;
     justify-content: flex-start;
     align-items: flex-end;
     font-size: 20px;
@@ -169,14 +218,20 @@
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    column-gap: 60px;
     font-size: 20px;
     line-height: 20px;
     grid-column: 1/3;
+    align-items: flex-start;
   }
 }
 
 .example__summary p {
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    // margin: 0 1px 9px;
+  }
 }
 
 
@@ -187,4 +242,8 @@
 .example__image {
   width: 100%;
   height: auto;
+
+  @media (min-width: @desktop-width) {
+    margin-top: -170px;
+  }
 }

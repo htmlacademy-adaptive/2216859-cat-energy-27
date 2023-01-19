@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Каталог товаров</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="icon" href="favicon.ico" >
-    <link rel="icon" href="images/favicons/32.svg" type="image/svg">
-    <link rel="apple-touch-icon" href="images/favicons/apple-icon.png">
+    <link rel="icon" href="img/favicons/32.svg" type="image/svg">
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
@@ -21,7 +24,8 @@
             <img class="logo__icon" src="img/logo-icon.svg" width="33" height="38" alt="Логотип.">
           </picture>
           <picture>
-            <source media="(min-width: 708px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 1220px)" srcset="img/logo-desktop.svg" width="202" height="60">
+            <source media="(min-width: 708px)" srcset="img/logo-tablet@1x.svg" width="174" height="52">
             <img class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="Cat energy.">
           </picture>
         </a>
@@ -49,7 +53,10 @@
             <li class="card">
               <a class="card__link" href="#" tabindex="-1">
                 <picture>
-                  <source media="(min-width: 708px)" srcset="img/chiken500-desktop@1x.png 1x, img/chicken500-desktop@2x.png 2x">
+                  <source type="image/webp" media="(min-width: 708px)" srcset="img/chicken500-desktop@1x.webp 1x, img/chicken500-desktop@2x.webp 2x" width="161" height="172">
+                  <source type="image/webp" srcset="img/chicken-500.webp 1x, img/chicken500-mobile@2x.webp 2x" width="68" height="86">
+
+                  <source media="(min-width: 708px)" srcset="img/chicken500-desktop@1x.png 1x, img/chicken500-desktop@2x.png 2x" width="161" height="172">
                   <img class="card__image" src="img/chicken-500.png" srcset="img/chicken500-mobile@2x.png 2x" width="68" height="86" alt="Cat energy pro с курицей 500&nbsp;г.">
                 </picture>
               </a>
@@ -62,15 +69,19 @@
                 <dt class="features__term">Вкус</dt>
                 <dd class="features__value">Курица</dd>
                 <dt class="features__term">Цена</dt>
-                <dd class="features__value">700&nbsp;р</dd>
+                <dd class="features__value">700&nbsp;&#8381;</dd>
               </dl>
               <a class="card__order" href="#">Заказать</a>
             </li>
             <li class="card">
               <a class="card__link" href="#" tabindex="-1">
                 <picture>
-                  <source media="(min-width: 1220px)" srcset="img/chicken1000-desktop@2x.png 1x, img/chicken1000-desktop@2x.png 2x">
-                  <source media="(min-width: 708px)" srcset="img/chicken1000-tablet@2x.png 1x, img/chicken1000-tablet@2x.png 2x">
+                  <source type="image/webp" media="(min-width: 1220px)" srcset="img/chicken1000-desktop@2x.webp 1x, img/chicken1000-desktop@2x.webp 2x" width="172" height="196">
+                  <source type="image/webp" media="(min-width: 708px)" srcset="img/chicken1000-tablet@2x.webp 1x, img/chicken1000-tablet@2x.webp 2x" width="168" height="206">
+                  <source type="image/webp" srcset="img/chicken-1000.webp 1x, img/chicken1000-mobile@2x.webp 2x" width="84" height="100">
+
+                  <source media="(min-width: 1220px)" srcset="img/chicken1000-desktop@2x.png 1x, img/chicken1000-desktop@2x.png 2x" width="172" height="196">
+                  <source media="(min-width: 708px)" srcset="img/chicken1000-tablet@2x.png 1x, img/chicken1000-tablet@2x.png 2x" width="168" height="206">
                   <img class="card__image" src="img/chicken-1000.png" srcset="img/chicken1000-mobile@2x.png 2x" width="84" height="100" alt="Cat energy pro с курицей 1000&nbsp;г.">
                 </picture>
               </a>
@@ -83,14 +94,17 @@
                 <dt class="features__term">Вкус</dt>
                 <dd class="features__value">Курица</dd>
                 <dt class="features__term">Цена</dt>
-                <dd class="features__value">1000&nbsp;р</dd>
+                <dd class="features__value">1000&nbsp;&#8381;</dd>
               </dl>
               <a class="card__order" href="#">Заказать</a>
             </li>
             <li class="card">
               <a class="card__link" href="#" tabindex="-1">
                 <picture>
-                  <source media="(min-width: 708px)" srcset="img/fish500-desktop@1x.png 1x, img/fish500-desktop@2x.png 2x">
+                  <source type="image/webp" media="(min-width: 708px)" srcset="img/fish500-desktop@1x.webp 1x, img/fish500-desktop@2x.webp 2x" width="163" height="174">
+                  <source type="image/webp" srcset="img/fish-500.webp 1x, img/fish500-mobile@2x.webp 2x" width="68" height="78">
+
+                  <source media="(min-width: 708px)" srcset="img/fish500-desktop@1x.png 1x, img/fish500-desktop@2x.png 2x" width="163" height="174">
                   <img class="card__image" src="img/fish-500.png" srcset="img/fish500-mobile@2x.png 2x" width="68" height="78" alt="Cat energy pro с рыбой 500&nbsp;г.">
                 </picture>
               </a>
@@ -103,15 +117,19 @@
                   <dt class="features__term">Вкус</dt>
                   <dd class="features__value">Рыба</dd>
                   <dt class="features__term">Цена</dt>
-                  <dd class="features__value">700&nbsp;р</dd>
+                  <dd class="features__value">700&nbsp;&#8381;</dd>
                 </dl>
               <a class="card__order" href="#">Заказать</a>
             </li>
             <li class="card">
               <a class="card__link" href="#" tabindex="-1">
                 <picture>
-                  <source media="(min-width: 1220px)" srcset="img/fish1000-desktop@2x.png 1x, img/fish1000-desktop@2x.png 2x">
-                  <source media="(min-width: 708px)" srcset="img/fish1000-tablet@2x.png 1x, img/fish1000-tablet@2x.png 2x">
+                  <source type="image/webp" media="(min-width: 1220px)" srcset="img/fish1000-desktop@2x.webp 1x, img/fish1000-desktop@2x.webp 2x" width="172" height="196">
+                  <source type="image/webp" media="(min-width: 708px)" srcset="img/fish1000-tablet@2x.webp 1x, img/fish1000-tablet@2x.webp 2x" width="168" height="200">
+                  <source type="image/webp" srcset="img/fish-1000.webp 1x, img/fish1000-mobile@2x.webp 2x" width="84" height="100">
+
+                  <source media="(min-width: 1220px)" srcset="img/fish1000-desktop@2x.png 1x, img/fish1000-desktop@2x.png 2x" width="172" height="196">
+                  <source media="(min-width: 708px)" srcset="img/fish1000-tablet@2x.png 1x, img/fish1000-tablet@2x.png 2x" width="168" height="200">
                   <img class="card__image" src="img/fish-1000.png" srcset="img/fish1000-mobile@2x.png 2x" width="84" height="100" alt="Cat energy pro с рыбой 1000&nbsp;г.">
                 </picture>
               </a>
@@ -124,14 +142,17 @@
                   <dt class="features__term">Вкус</dt>
                   <dd class="features__value">Рыба</dd>
                   <dt class="features__term">Цена</dt>
-                  <dd class="features__value">1000&nbsp;р</dd>
+                  <dd class="features__value">1000&nbsp;&#8381;</dd>
                 </dl>
               <a class="card__order" href="#">Заказать</a>
             </li>
             <li class="card">
               <a class="card__link" href="#" tabindex="-1">
                 <picture>
-                  <source media="(min-width: 708px)" srcset="img/buckweat500-tablet@1x.png 1x, img/buckweat500-tablet@2x.png 2x">
+                  <source type="image/webp" media="(min-width: 708px)" srcset="img/buckweat500-tablet@1x.webp 1x, img/buckweat500-tablet@2x.webp 2x" width="161" height="171">
+                  <source type="image/webp" srcset="img/buckweat-500.webp 1x, img/buckweat500-mobile@2x.webp 2x" width="68" height="78">
+
+                  <source media="(min-width: 708px)" srcset="img/buckweat500-tablet@1x.png 1x, img/buckweat500-tablet@2x.png 2x" width="161" height="171">
                   <img class="card__image" src="img/buckweat-500.png" srcset="img/buckweat500-mobile@2x.png 2x" width="68" height="78" alt="Cat energy slim с гречкой 500&nbsp;г.">
                 </picture>
                 </a>
@@ -144,15 +165,19 @@
                   <dt class="features__term">Вкус</dt>
                   <dd class="features__value">Гречка</dd>
                   <dt class="features__term">Цена</dt>
-                  <dd class="features__value">400&nbsp;р</dd>
+                  <dd class="features__value">400&nbsp;&#8381;</dd>
                 </dl>
               <a class="card__order" href="#">Заказать</a>
             </li>
             <li class="card">
               <a class="card__link" href="#" tabindex="-1">
                 <picture>
-                  <source media="(min-width: 1220px)" srcset="img/buckweat1000-desktop@2x.png 1x, img/buckweat1000-desktop@2x.png 2x">
-                  <source media="(min-width: 708px)" srcset="img/buckweat1000-tablet@2x.png 1x, img/buckweat1000-tablet@2x.png 2x">
+                  <source type="image/webp" media="(min-width: 1220px)" srcset="img/buckweat1000-desktop@2x.webp 1x, img/buckweat1000-desktop@2x.webp 2x" width="172" height="196">
+                  <source type="image/webp" media="(min-width: 708px)" srcset="img/buckweat1000-tablet@2x.webp 1x, img/buckweat1000-tablet@2x.webp 2x" width="168" height="200">
+                  <source type="image/webp" srcset="img/buckweat-1000.webp 1x, img/buckweat1000-mobile@2x.webp 2x" width="84" height="100">
+
+                  <source media="(min-width: 1220px)" srcset="img/buckweat1000-desktop@2x.png 1x, img/buckweat1000-desktop@2x.png 2x" width="172" height="196">
+                  <source media="(min-width: 708px)" srcset="img/buckweat1000-tablet@2x.png 1x, img/buckweat1000-tablet@2x.png 2x" width="168" height="200">
                   <img class="card__image" src="img/buckweat-1000.png" srcset="img/buckweat1000-mobile@2x.png 2x" width="84" height="100" alt="Cat energy slim с гречкой 100&nbsp;г.">
                 </picture>
               </a>
@@ -165,14 +190,17 @@
                   <dt class="features__term">Вкус</dt>
                   <dd class="features__value">Гречка</dd>
                   <dt class="features__term">Цена</dt>
-                  <dd class="features__value">700&nbsp;р</dd>
+                  <dd class="features__value">700&nbsp;&#8381;</dd>
                 </dl>
               <a class="card__order" href="#">Заказать</a>
             </li>
             <li class="card">
               <a class="card__link" href="#" tabindex="-1">
                 <picture>
-                  <source media="(min-width: 708px)" srcset="img/rice500-tablet@2x.png 1x, img/rice500-tablet@2x.png 2x">
+                  <source type="image/webp" media="(min-width: 708px)" srcset="img/rice500-tablet@2x.webp 1x, img/rice500-tablet@2x.webp 2x" width="163" height="174">
+                  <source type="image/webp" srcset="img/rice-500.webp 1x, img/rice500-mobile@2x.webp 2x" width="72" height="84">
+
+                  <source media="(min-width: 708px)" srcset="img/rice500-tablet@2x.png 1x, img/rice500-tablet@2x.png 2x" width="163" height="174">
                   <img class="card__image" src="img/rice-500.png" srcset="img/rice500-mobile@2x.png 2x" width="72" height="84" alt="Cat energy slim с рисом 500&nbsp;г.">
                 </picture>
               </a>
@@ -185,15 +213,15 @@
                   <dt class="features__term">Вкус</dt>
                   <dd class="features__value">Рис</dd>
                   <dt class="features__term">Цена</dt>
-                  <dd class="features__value">500&nbsp;р</dd>
+                  <dd class="features__value">500&nbsp;&#8381;</dd>
                 </dl>
               <a class="card__order" href="#">Заказать</a>
             </li>
             <li class="extension">
               <div class="extension__wrapper">
-                <h2 class="extension__title">Показать еще<br> 100500 товаров</h2>
+                <h2 class="extension__title">Показать еще<span class="extension__empty-line"></span> 100500 товаров</h2>
                 <p class="extension__text">
-                  На самом деле вкусов гораздо больше
+                  На самом деле вкусов гораздо больше!
                 </p>
                 <a class="extension__to-all button" href="#">
                   Показать все
@@ -210,7 +238,7 @@
                     <a href="#">Сахарозаменитель</a>
                   </h3>
                     <p class="extras__text">1 упаковка (100&nbsp;г)</p>
-                    <p class="extras__price">200&nbsp;р</p>
+                    <p class="extras__price">200&nbsp;&#8381;</p>
                   <a class="extras__order extras__button" href="#">заказать</a>
                 </li>
                 <li class="extras__item">
@@ -218,7 +246,7 @@
                     <a href="#">Питьевая вода</a>
                   </h3>
                   <p class="extras__text">5 литров</p>
-                  <p class="extras__price">50&nbsp;р</p>
+                  <p class="extras__price">50&nbsp;&#8381;</p>
                   <a class="extras__order extras__button" href="#">заказать</a>
                 </li>
                 <li class="extras__item">
@@ -226,21 +254,21 @@
                     <a href="#">Молоко</a>
                   </h3>
                   <p class="extras__text">1 литр</p>
-                  <p class="extras__price">100&nbsp;р</p>
+                  <p class="extras__price">100&nbsp;&#8381;</p>
                   <a class="extras__order extras__button" href="#">заказать</a>
               </li>
               <li class="extras__item">
                   <h3 class="extras__title">
-                    <a href="#">Витамиины</a>
+                    <a href="#">Витамины</a>
                   </h3>
                   <p class="extras__text">1 упаковка (30&nbsp;г)</p>
-                  <p class="extras__price">300&nbsp;р</p>
+                  <p class="extras__price">300&nbsp;&#8381;</p>
                   <a class="extras__order extras__button" href="#">заказать</a>
               </li>
               </ul>
               <div class="extras__bonus bonus">
                 <p class="bonus__title bonus__title--icon">
-                  Закажите все и получите чехол для кота в подарок
+                  Закажите все <br> и получите чехол для кота в подарок
                 </p>
               </div>
             </div>
@@ -252,7 +280,11 @@
       <section class="contacts__wrapper">
         <h2 class="contacts__title visually-hidden">Наш адрес</h2>
         <p class="contacts__heading">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
-        <p class="contacts__address">ул. Большая <br> Конюшенная, д. 19/8 <br> Санкт-Петербург</p>
+        <p class="contacts__address">
+          ул. Большая<br>
+          Конюшенная, д. 19/8 <br><span></span>
+          Санкт-Петербург
+      </p>
       </section>
       <section class="map">
         <h2 class="map__title visually-hidden">Мы на карте</h2>
@@ -263,7 +295,7 @@
     <footer class="footer">
       <div class="footer__inner">
         <a class="footer__logo logo" href="index.html">
-          <img class="logo__image" src="img/logo-text.svg" width="101" height="18" alt="Сat energy.">
+          <img class="logo__image" src="img/logo-text.svg" width="128" height="24" alt="Сat energy.">
         </a>
         <ul class="footer__social social">
           <li class="social__item">

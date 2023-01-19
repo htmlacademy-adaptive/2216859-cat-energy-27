@@ -1,6 +1,8 @@
 .card {
-  margin-bottom: 19px;
+  position: relative;
+  margin-bottom: 25px;
   display: grid;
+  align-items: center;
   grid-template-areas:
     "img title"
     "img features"
@@ -8,10 +10,20 @@
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
   justify-content: center;
-  align-items: center;
+
+  &::before {
+    position: absolute;
+    content: "";
+    display: block;
+    top: 0;
+    height: 1px;
+    background-color: #e6e6e6;
+    width: 1000%;
+    left: -768px;
+  }
 
   @media (min-width: @tablet-width) {
-    padding: 0 36px 39px 36px;
+    padding: 0 37px 39px;
     margin: 0;
     grid-template-areas:
       "img"
@@ -22,16 +34,28 @@
     grid-template-rows: 1fr repeat(3, min-content);
     align-items: center;
     background-color: @basic-grey;
+
+    &::before {
+      content: none;
+    }
   }
 }
 
 .card__link {
-
+  width: 140px;
+  height: 117px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   grid-area: img;
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 34px;
+    width: 168px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 172px;
   }
 }
 
@@ -43,14 +67,16 @@
 }
 
 .card__title {
-  margin: 0;
-  margin-right: 64px;
-  padding-bottom: 18px;
+  margin: 10px 64px 0 0;
 
   @media (min-width: @tablet-width) {
     margin: 0;
-    padding-bottom: 21px;
+    padding: 10px 45px 15px;
     text-align: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 30px 1px 18px;
   }
 }
 
@@ -67,7 +93,12 @@
 
   @media (min-width: @tablet-width) {
     font-size: 20px;
-    line-height: 1.2;
+    line-height: 24px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 20px;
+    line-height: 21px;
   }
 }
 

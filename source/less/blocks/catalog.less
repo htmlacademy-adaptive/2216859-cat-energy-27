@@ -1,3 +1,7 @@
+.catalog {
+  overflow-x: hidden;
+}
+
 .catalog__wrapper {
   width: 280px;
   margin: 0 auto;
@@ -13,7 +17,7 @@
 
 .catalog__title {
   margin: 0;
-  padding: 27px 0 41px 0;
+  padding: 28px 0 40px 0;
   font-family: "Oswald", sans-serif;
   font-size: 36px;
   font-weight: 400;
@@ -21,14 +25,15 @@
   color: @title-color;
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 82px;
-    padding-top: 64px;
+    padding-bottom: 160px;
+    padding-top: 56px;
     font-size: 60px;
     line-height: 60px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 84px;
+    padding-top: 43px;
+    padding-bottom: 161px;
   }
 }
 
@@ -41,13 +46,13 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    gap: 60px;
+    gap: 137px 60px;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    gap: 63px 80px;
+    gap: 140px 79px;
   }
 }

@@ -5,9 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Подбор программы</title>
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/lato/Lato-Regular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldmedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="fonts/oswald/oswaldregular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="icon" href="favicon.ico" >
-    <link rel="icon" href="images/favicons/32.svg" type="image/svg">
-    <link rel="apple-touch-icon" href="images/favicons/apple-icon.png">
+    <link rel="icon" href="img/favicons/32.svg" type="image/svg">
+    <link rel="apple-touch-icon" href="img/favicons/apple-icon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/favicons/apple-icon-180x180.png">
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicons/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicons/favicon-16x16.png">
@@ -21,7 +24,8 @@
             <img class="logo__icon" src="img/logo-icon.svg" width="33" height="38" alt="Логотип.">
           </picture>
           <picture>
-            <source media="(min-width: 708px)" srcset="img/logo-desktop.svg">
+            <source media="(min-width: 1220px)" srcset="img/logo-desktop.svg" width="202" height="60">
+            <source media="(min-width: 708px)" srcset="img/logo-tablet@1x.svg" width="174" height="52">
             <img class="logo__text" src="img/logo-text.svg" width="101" height="18" alt="Cat energy.">
           </picture>
         </a>
@@ -45,7 +49,7 @@
   <section class="form">
     <div class="form__wrapper">
       <h1 class="form__title">Подбор программы</h1>
-      <p class="form__text">Заполние анкету, и мы подберем программу питания для вашего кота</p>
+      <p class="form__text">Заполните анкету, и мы подберем<br> программу питания для вашего кота</p>
       <form class="form__fields" action="https://echo.htmlacademy.ru/courses" method="post">
       <div class="form__group">
         <fieldset class="form__fields">
@@ -93,21 +97,23 @@
         </fieldset>
       </div>
         <fieldset class="form__owner">
-          <legend class="form__subtitle">Контактные данные (владельца кота)</legend>
+          <legend class="form__owner-subtitle">Контактные данные (владельца кота)</legend>
           <ul class="form__contacts-list">
-            <li class="form__item">
+            <li class="form__contacts-item">
               <label class="form__description" for="email-field">e-mail:<sup>*</sup></label>
-              <input class="form__owner-data" id="email-field" type="email" placeholder="kuklachev@gmail.com" name="e-mail" required>
+              <input class="form__owner-email" id="email-field" type="email" placeholder="kuklachev@gmail.com" name="e-mail" required>
+              <svg class="form__owner-icon" aria-hidden="true" width="18" height="13"><use href="img/sprite.svg#email"/></svg>
             </li>
-            <li class="form__item">
+            <li class="form__contacts-item">
               <label class="form__description" for="phone-field">телефон:<sup>*</sup></label>
-              <input class="form__owner-data" id="phone-field" type="tel" placeholder="8(960)900-60-90" name="tel" required>
+              <input class="form__owner-phone" id="phone-field" type="tel" placeholder="8 (960) 900-60-90" name="tel" required>
+              <svg class="form__owner-icon" aria-hidden="true" width="20" height="20"><use href="img/sprite.svg#phone"/></svg>
             </li>
           </ul>
         </fieldset>
         <fieldset class="form__comment">
-          <legend class="form__subtitle">Комментарий</legend>
-            <label class="form__subtitle visually-hidden" for="comment-field">Комментарии</label>
+          <legend class="form__comment-subtitle">Комментарий</legend>
+            <label class="form__comment-field" for="comment-field"></label>
             <textarea class="form__comment-area" id="comment-field" placeholder="Расскажите обо всех повадках кота"></textarea>
         </fieldset>
         <fieldset class="form__extra">
@@ -155,7 +161,11 @@
   <section class="contacts__wrapper">
     <h2 class="contacts__title visually-hidden">Наш адрес</h2>
     <p class="contacts__heading">Приглашаем<br> к сотрудничеству<br> дилеров!</p>
-    <p class="contacts__address">ул. Большая <br> Конюшенная, д. 19/8 <br> Санкт-Петербург</p>
+    <p class="contacts__address">
+      ул. Большая<br>
+      Конюшенная, д. 19/8 <br><span></span>
+      Санкт-Петербург
+  </p>
   </section>
   <section class="map">
     <h2 class="map__title visually-hidden">Мы на карте</h2>
@@ -166,7 +176,7 @@
 <footer class="footer">
   <div class="footer__inner">
     <a class="footer__logo logo" href="index.html">
-      <img class="logo__image" src="img/logo-text.svg" width="101" height="18" alt="Сat energy.">
+      <img class="logo__image" src="img/logo-text.svg" width="128" height="24" alt="Сat energy.">
     </a>
     <ul class="footer__social social">
       <li class="social__item">

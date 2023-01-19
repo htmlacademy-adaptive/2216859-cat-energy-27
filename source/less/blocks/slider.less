@@ -1,5 +1,92 @@
-.slider__list {
-  margin: 0;
+.slider {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: calc(var(--curtain-place) * 100%) auto calc((1 - var(--curtain-place)) * 100%);
+  width: min(100%, 560px);
+  aspect-ratio: 280/256;
+  --curtain-place: 0.5;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 100px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 0;
+    margin-top: -135px;
+    margin-bottom: 85px;
+    margin-right: 0;
+  }
+}
+
+
+img {
+  width: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.slider__image {
+  display: block;
+  height: 100%;
+  object-fit: cover;
+
+  &--state_before {
+    object-position: left;
+  }
+
+  &--state_after {
+    object-position: right;
+  }
+}
+
+.compare__image {
+  display: block;
+}
+
+.slider__curtain {
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  margin: 0 -2px;
+  width: 4px;
+  height: 100%;
+  border-radius: 2px;
+  color: var(--curtain-color, rgb(102, 102, 102));
+  background-color: currentColor;
+  cursor: col-resize;
+
+  &:hover {
+    --curtain-color: @primary-button-color;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.slider__thumb {
+  position: relative;
+  box-sizing: border-box;
+  display: grid;
+  margin: -18px;
   padding: 0;
-  list-style-type: none;
+  width: 40px;
+  height: 40px;
+  color: inherit;
+  border: 2px solid currentColor;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255);
+  cursor: col-resize;
+}
+
+.slider__button {
+  position: absolute;
+  fill: rgb(102, 102, 102);
+  top: 9px;
+  left: 6px;
+}
+
+.slider__curtain:hover .slider__button {
+  stroke: @primary-button-color;
+  fill: @primary-button-color;
 }
