@@ -171,9 +171,10 @@
 
 .form-input[type="radio"]:focus + span {
   border-color: @primary-button-color;
+  outline: solid 1px @primary-button-color;
 }
 
-.form-input[type="radio"]:disabled + span {
+.form-input[type="radio"]:disabled + span + .form__program-label {
   opacity: 0.3;
 }
 
@@ -205,10 +206,6 @@
 
 .form__program-name:hover .form__program-mark {
   border-color: rgba(186, 186, 186, 1);
-}
-
-.form__program-name--disabled .form__program-mark {
-  opacity: 0.3;
 }
 
 .form__owner {
@@ -342,9 +339,10 @@
 
 .form-input[type="checkbox"]:focus + span {
   border-color: @primary-button-color;
+  outline: solid 1px @primary-button-color;
 }
 
-.form-input[type="checkbox"]:disabled + span {
+.form-input[type="checkbox"]:disabled + span + .form__product-label {
   opacity: 0.3;
 }
 
